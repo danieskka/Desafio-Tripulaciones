@@ -16,7 +16,7 @@ steps:
     entrypoint: bash
     args: [
       "-c",
-      "gcloud run deploy mi-servicio-server-sql
+      "gcloud run deploy mi-servicio-server
         --image=gcr.io/desafio-de-tripulaciones/desafio_server_sql
         --region=europe-west1
         --platform=managed
