@@ -3,11 +3,11 @@ const queries = require('../queries/user.queries');
 
 
 const createUser = async (newUser) => {
-    const { email, password, age, location } = newUser;
+    const { email, password, username, birth_date, gender, zip_code, number_of_children } = newUser;
     let client, result;
     try {
         client = await pool.connect();
-        const data = await client.query(queries.createUser,[email, password, age, location])
+        const data = await client.query(queries.createUser,[email, password, username, birth_date, gender, zip_code, number_of_children])
         result = data.rowCount
     } catch (err) {
         console.log(err);
