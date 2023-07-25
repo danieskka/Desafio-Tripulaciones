@@ -22,6 +22,14 @@ const Form = () => {
   //   }
   // };
 
+  // const handleLogOut = async () => {
+  //   try {
+  //     await axios.post('/logout');
+  //   } catch (error) {
+  //     console.log('Error during logout:', error);
+  //   }
+  // };
+
   return (
     <>
       <form onSubmit={handleSubmit(handleSignup)} className="sign-up-form">
@@ -48,7 +56,11 @@ const Form = () => {
         <input type="password" {...register("password", { required: true })} />
 
         <button type="submit">Log in</button>
-      </form> */}
+      </form>
+
+      <button onClick={handleLogOut}>
+          Log Out
+      </button> */}
     </>
   )
 };

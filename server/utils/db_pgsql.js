@@ -8,4 +8,6 @@ const pool = new Pool({
   password: process.env.PG_PASSWORD,
 });
 
+console.log('Conectado a la BBDD SQL correctamente');
+
 module.exports = pool;
