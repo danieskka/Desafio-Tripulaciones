@@ -16,7 +16,7 @@ steps:
     entrypoint: bash
     args: [
       "-c",
-      "gcloud run deploy mi-servicio-server_sql
+      "gcloud run deploy mi-servicio-server
         --image=gcr.io/desafio-de-tripulaciones/desafio_server_sql
         --region=europe-west1
         --platform=managed
@@ -34,13 +34,13 @@ steps:
     ]
 availableSecrets:
   secretManager:
-    - versionName: projects/180585318088/secrets/mongo/versions/latest
+    - versionName: projects/133006933274/secrets/user/versions/latest
       env: PG_USER
-    - versionName: projects/133006933274/secrets/database/versions/latest
+    - versionName: projects/133006933274/secrets/HOST/versions/latest
       env: PG_HOST
-    - versionName: projects/133006933274/secrets/database/versions/latest
+    - versionName: projects/133006933274/secrets/DATABASE/versions/latest
       env: PG_DATABASE
-    - versionName: projects/133006933274/secrets/database/versions/latest
+    - versionName: projects/133006933274/secrets/PASSWORD/versions/latest
       env: PG_PASSWORD
-    - versionName: projects/133006933274/secrets/database/versions/latest
+    - versionName: projects/133006933274/secrets/JWT_SECRET/versions/latest
       env: JWT_SECRET
