@@ -26,12 +26,9 @@ const MapView = () => {
                 <MapContainer center={currentPosition} zoom={16} scrollWheelZoom={true}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                 </MapContainer>
-            ) : (
-                <p>Loading map...</p>
-            )}
+            ) : ( <p>Loading map...</p> )}
         </article>
 
 //     <article>
