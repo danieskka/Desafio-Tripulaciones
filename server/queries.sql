@@ -13,7 +13,23 @@ CREATE TABLE users (
     login BOOLEAN DEFAULT false
 );
 
--- Crear usuario Ej:
 
+CREATE TABLE quiz_answers (
+    user_id SERIAL PRIMARY KEY,
+    Q1 VARCHAR,
+    Q2 VARCHAR,
+    Q3 VARCHAR,
+    Q4 VARCHAR,
+    Q5 VARCHAR,
+    Q6 VARCHAR,
+    Q7 VARCHAR,
+    Q8 VARCHAR,
+    Q9 VARCHAR,
+    Q10 VARCHAR,
+    FOREIGN KEY (user_id) REFERENCES users(users_id)
+);
+
+
+-- Crear usuario Ej:
 INSERT INTO userss (email, password, username, birth_date, gender, zip_code, number_of_children)
 VALUES ('ejemplo@email.com', 'contraseña123', 'nombre_usuario', '1990-01-01', 'masculino', '12345', 2);
