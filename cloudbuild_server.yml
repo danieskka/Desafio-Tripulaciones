@@ -5,7 +5,7 @@ steps:
 
   # Construye la imagen de la aplicación web
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/desafio-de-tripulaciones/desafio_server_sql', './client' ]
+    args: [ 'build', '-t', 'gcr.io/desafio-de-tripulaciones/desafio_server_sql', './server' ]
 
   # Sube la imagen al Container Registry
   - name: 'gcr.io/cloud-builders/docker'
