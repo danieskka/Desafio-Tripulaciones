@@ -10,9 +10,9 @@ const saltRounds = 10;
 const signUpUser = async(req, res, next) => {
     let data;
     try {
-        const {email, password, age, location} = req.body;
+        const {email, password, username, birth_date, gender, zip_code, number_of_children} = req.body;
         const hashPassword = await bcrypt.hash(password, saltRounds);
-        const newUser = {email, "password":hashPassword, age, location}
+        const newUser = {email, "password":hashPassword, username, birth_date, gender, zip_code, number_of_children}
         data = await users.createUser(newUser);
         console.log(data)
         await users.updateUser(email);
