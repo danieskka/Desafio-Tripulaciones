@@ -41,6 +41,11 @@ app.use(passport.session());
 // Rutas
 app.use("/",userRoutes);
 
+// Ruta prueba cloud
+app.get("/", (req, res) => {
+  res.send("¡Hola Cloud esta ruta esta funcionando :)!");
+});
+
 // Error
 app.use(error404);
 
