@@ -21,5 +21,26 @@ steps:
         --region=europe-west1
         --platform=managed
         --allow-unauthenticated
-        --port=3000"
+        --port=3000
+        --update-env-vars PG_USER=$$PG_USER
+        --update-env-vars PG_HOST=$$PG_HOST
+        --update-env-vars PG_DATABASE=$$PG_DATABASE
+        --update-env-vars PG_PASSWORD=$$PG_PASSWORD
+        --update-env-vars JWT_SECRET=$$JWT_SECRET"
     ]
+
+    secretEnv: [
+      'PG_USER', 'PG_HOST', 'PG_DATABASE', 'PG_PASSWORD', 'JWT_SECRET'
+    ]
+availableSecrets:
+  secretManager:
+    - versionName: projects/180585318088/secrets/mongo/versions/latest
+      env: PG_USER
+    - versionName: projects/133006933274/secrets/database/versions/latest
+      env: PG_HOST
+    - versionName: projects/133006933274/secrets/database/versions/latest
+      env: PG_DATABASE
+    - versionName: projects/133006933274/secrets/database/versions/latest
+      env: PG_PASSWORD
+    - versionName: projects/133006933274/secrets/database/versions/latest
+      env: JWT_SECRET
