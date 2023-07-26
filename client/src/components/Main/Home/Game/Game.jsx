@@ -1,7 +1,15 @@
-import React from "react";
+import {Routes, Route} from 'react-router-dom';
+import Quiz from './Quiz/Quiz';
 
 const Game = () => {
-  return <div>Game</div>;
+  return (
+  <>
+    <h1>Estoy en Game</h1>
+    <Routes>
+      <Route path="/quiz" element={<Quiz/>}/>
+    </Routes>
+  </>
+  );
 };
 
 export default Game;
