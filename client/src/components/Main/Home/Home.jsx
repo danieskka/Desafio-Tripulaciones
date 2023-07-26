@@ -1,10 +1,8 @@
-import MapView from './MapView/MapView'
 
 const Home = () => {
   return (
     <section>
-      <h1>MAP</h1>
-      <MapView />
+      <h1>Soy el Home</h1>
     </section>
   );
 };
