@@ -12,6 +12,7 @@ const app = express();
 const port = 3000;
 
 const userRoutes = require('./routes/userRoutes');
+const quizRoutes = require('./routes/quizRoutes');
 
 app.use(helmet());
 
@@ -40,6 +41,8 @@ app.use(passport.session());
 
 // Rutas
 app.use("/",userRoutes);
+
+app.use("/",quizRoutes);
 
 // Ruta prueba cloud
 app.get("/", (req, res) => {
