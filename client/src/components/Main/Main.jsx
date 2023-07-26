@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/*" element={<Home/>}/>
         <Route path="/form" element={<Form/>}/>
         <Route path="/game" element={<Quiz/>}/>
         <Route path="/info" element={<Info/>}/>
