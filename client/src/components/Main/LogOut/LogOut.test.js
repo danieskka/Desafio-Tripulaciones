@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Form from "./Form";
+import LogOut from "./LogOut";
 
-describe("Form", () => {
+describe("LogOut", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<Form />);
+    const wrapper = shallow(<LogOut />);
     expect(wrapper).toMatchSnapshot();
   });
 });
