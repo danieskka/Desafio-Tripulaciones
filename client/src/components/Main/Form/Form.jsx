@@ -6,33 +6,33 @@ const Form = () => {
 
   const { register, handleSubmit } = useForm();
 
-  const handleSignup = async (data) => {
-    try {
-      await axios.post("/signup", data);
-    } catch (error) {
-      console.log("Error:", error);
-    }
-  };
-
-  // const handleLogin = async (data) => {
+  // const handleSignup = async (data) => {
   //   try {
-  //     await axios.post("/login", data);
+  //     await axios.post("/signup", data);
   //   } catch (error) {
   //     console.log("Error:", error);
   //   }
   // };
 
-  // const handleLogOut = async () => {
-  //   try {
-  //     await axios.post('/logout');
-  //   } catch (error) {
-  //     console.log('Error during logout:', error);
-  //   }
-  // };
+  const handleLogin = async (data) => {
+    try {
+      await axios.post("/login", data);
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  };
+
+  const handleLogOut = async () => {
+    try {
+      await axios.post('/logout');
+    } catch (error) {
+      console.log('Error during logout:', error);
+    }
+  };
 
   return (
     <>
-      <form onSubmit={handleSubmit(handleSignup)} className="sign-up-form">
+      {/* <form onSubmit={handleSubmit(handleSignup)} className="sign-up-form">
         <label>Email:</label>
         <input type="email" {...register("email", { required: true })} />
 
@@ -72,9 +72,9 @@ const Form = () => {
         </select>
 
         <button type="submit">Sign up</button>
-      </form>
+      </form> */}
 
-      {/* <form onSubmit={handleSubmit(handleLogin)}  className="sign-up-form">
+      <form onSubmit={handleSubmit(handleLogin)}  className="sign-up-form">
         <label>Email:</label>
         <input type="email" {...register("email", { required: true })} />
 
@@ -86,7 +86,7 @@ const Form = () => {
 
       <button onClick={handleLogOut}>
           Log Out
-      </button> */}
+      </button>
     </>
   )
 };

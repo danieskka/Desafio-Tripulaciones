@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { data } from ".";
+import { data } from "./index";
 import axios from 'axios';
 
 
@@ -9,7 +9,7 @@ const Quiz = () => {
   const options = ['A', 'B', 'C', 'D'];
   const correctAnswers = ['D', 'B', 'A', 'C', 'B', 'C', 'C', 'D', 'C', 'C'];
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [data, setData] = useState();
+  const url = '/quiz'
 
 
   const handleOptionSelect = (questionIndex, optionIdx) => {
@@ -19,38 +19,6 @@ const Quiz = () => {
       setAnswers(newAnswers);
     }
   }
-
-  { user_id, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10}
-
-  const url = '/quiz'
-  const userAnswers = () => {
-    // for (let i = 0; i < answers.length; i++) {      
-    // }
-    const dataAnswers =   {
-      user_id: 1,
-      q1: "B",
-      q2: "B",
-      q3: "B",
-      q4: "B",
-      q5: "B",
-      q6: "B",
-      q7: "B",
-      q8: "B",
-      q9: "B",
-      q10: "B"
-    };
-    setData(dataAnswers)
-
-    axios.post(url, data)
-    .then(() => {
-      console.log('Exito'); // Actualiza el estado para mostrar el mensaje de éxito
-    })
-      .catch(error => {
-        error.status(500);
-      });
-    }
-
-
 
   
  const handleNextQuestion = () => {
@@ -64,13 +32,36 @@ const Quiz = () => {
       if (answers[i] === correctAnswers[i]) {
         counter++
       }
+
     }
     setScore(counter)
+
+
+    const userResults =   {
+      user_id: 1,
+      q1: answers[0],
+      q2: answers[1],
+      q3: answers[2],
+      q4: answers[3],
+      q5: answers[4],
+      q6: answers[5],
+      q7: answers[6],
+      q8: answers[7],
+      q9: answers[8],
+      q10: answers[9]
+    };
+
+      axios.post(url, userResults)
+      .then(() => {
+        console.log('Exito'); // Actualiza el estado para mostrar el mensaje de éxito
+      })
+        .catch(error => {
+          error.status(500);
+        });
   }
 
 
-const printQuestions = () => data.map((question, questionIndex) => {(
-    <article>
+  const printQuestions = () => data.map((question, questionIndex) => (
       <div key={questionIndex}>
         <h3>Pregunta {questionIndex +1}: {question.question}</h3>
               {question.options.map((option, optionIdx) => (
@@ -80,17 +71,19 @@ const printQuestions = () => data.map((question, questionIndex) => {(
                     {option.choice}
                     </label>
               ))}
+      {currentQuestionIndex < data.length - 1 ? (
+        <button onClick={handleNextQuestion}>SIGUIENTE</button>
+      ) : (
+        <button onClick={onSubmit}>Resultados</button>
+      )}
       </div>
-
-    </article>
-  )})
+  ))
 
 
   return (
     <section>
       <article>
         {printQuestions()}
-        <button onClick={onSubmit}>Resultados</button>
       </article>
     </section>
   );
