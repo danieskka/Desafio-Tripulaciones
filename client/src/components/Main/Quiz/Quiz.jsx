@@ -89,6 +89,21 @@ const Quiz = () => {
     );
   };
 
+  const getResultsMessage = (score) => {
+    if (score === 0) {
+      return `¡Ups! No has obtenido ningún acierto. No te preocupes, siempre hay oportunidad para aprender más sobre las olas de calor. Te animo a investigar un poco más y así estar preparado/a para enfrentar este fenómeno natural. ¡Ánimo!`;
+    } else if (score >= 1 && score <= 4) {
+      return `¡Bien hecho! Has obtenido ${score} aciertos. Aunque todavía hay aspectos por conocer, estás en el camino correcto. Las olas de calor pueden ser peligrosas, pero con más información, podrás protegerte mejor en el futuro. ¡Sigue aprendiendo y cuidándote!`;
+    } else if (score >= 5 && score <= 7) {
+      return `¡Muy bien! Has obtenido ${score} aciertos. ¡Tienes conocimientos sólidos sobre las olas de calor! Estás consciente de los riesgos y medidas preventivas necesarias para mantener tu bienestar durante estas condiciones extremas. ¡Sigue así!`;
+    } else if (score >= 8 && score <= 9) {
+      return `¡Felicidades! Has obtenido ${score} aciertos. ¡Casi un experto/a en olas de calor! Tu conocimiento sobre este tema es impresionante, y estás bien preparado/a para enfrentar situaciones de calor extremo. ¡Sigue así y mantén tu seguridad y la de otros!`;
+    } else if (score === 10) {
+      return `¡Enhorabuena, has acertado todas las preguntas!. ¡Sabes mucho sobre las olas de calor! Tu conocimiento es excepcional y estás bien informado/a sobre cómo protegerte y cuidarte durante condiciones de calor extremo. ¡Sigue siendo un ejemplo y comparte tu sabiduría con otros!`;
+    } else {
+      return "";
+    }
+  }
 
   return (
     <section>
@@ -96,6 +111,7 @@ const Quiz = () => {
       {showResults ? (
           <div>
             <h2>Tu puntuación es: {score}</h2>
+            <p>{getResultsMessage(score)}</p>
           </div>
         ) : (
           printQuestions()
