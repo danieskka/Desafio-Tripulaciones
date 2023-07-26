@@ -1,0 +1,25 @@
+steps:
+  # Configura el entorno
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['config', 'set', 'project', 'desafio-de-tripulaciones']
+
+  # Construye la imagen de la aplicación web
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/desafio-de-tripulaciones/desafio_client', './client' ]
+
+  # Sube la imagen al Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', 'gcr.io/desafio-de-tripulaciones/desafio_client' ]
+
+  # Implementa la imagen en Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
+    args: [
+      "-c",
+      "gcloud run deploy mi-servicio-client
+        --image=gcr.io/desafio-de-tripulaciones/desafio_client
+        --region=europe-west1
+        --platform=managed
+        --allow-unauthenticated
+        --port=5173"
+    ]

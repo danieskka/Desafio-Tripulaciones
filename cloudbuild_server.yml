@@ -1,0 +1,46 @@
+steps:
+  # Configura el entorno
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['config', 'set', 'project', 'desafio-de-tripulaciones']
+
+  # Construye la imagen de la aplicación web
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/desafio-de-tripulaciones/desafio_server_sql', './server' ]
+
+  # Sube la imagen al Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', 'gcr.io/desafio-de-tripulaciones/desafio_server_sql' ]
+
+  # Implementa la imagen en Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
+    args: [
+      "-c",
+      "gcloud run deploy mi-servicio-server
+        --image=gcr.io/desafio-de-tripulaciones/desafio_server_sql
+        --region=europe-west1
+        --platform=managed
+        --allow-unauthenticated
+        --port=3000
+        --update-env-vars PG_USER=$$PG_USER
+        --update-env-vars PG_HOST=$$PG_HOST
+        --update-env-vars PG_DATABASE=$$PG_DATABASE
+        --update-env-vars PG_PASSWORD=$$PG_PASSWORD
+        --update-env-vars JWT_SECRET=$$JWT_SECRET"
+    ]
+
+    secretEnv: [
+      'PG_USER', 'PG_HOST', 'PG_DATABASE', 'PG_PASSWORD', 'JWT_SECRET'
+    ]
+availableSecrets:
+  secretManager:
+    - versionName: projects/133006933274/secrets/user/versions/latest
+      env: PG_USER
+    - versionName: projects/133006933274/secrets/HOST/versions/latest
+      env: PG_HOST
+    - versionName: projects/133006933274/secrets/DATABASE/versions/latest
+      env: PG_DATABASE
+    - versionName: projects/133006933274/secrets/PASSWORD/versions/latest
+      env: PG_PASSWORD
+    - versionName: projects/133006933274/secrets/JWT_SECRET/versions/latest
+      env: JWT_SECRET
