@@ -9,6 +9,7 @@ const Quiz = () => {
   const options = ['A', 'B', 'C', 'D'];
   const correctAnswers = ['D', 'B', 'A', 'C', 'B', 'C', 'C', 'D', 'C', 'C'];
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showResults, setShowResults] = useState(false);
   const url = '/quiz'
 
 
@@ -35,6 +36,7 @@ const Quiz = () => {
 
     }
     setScore(counter)
+    setShowResults(true); 
 
     const userResults =   {
       q1: answers[0],
@@ -49,7 +51,6 @@ const Quiz = () => {
       q10: answers[9],
       total: counter
     };
-
       axios.post(url, userResults)
       .then(() => {
         console.log('Exito'); // Actualiza el estado para mostrar el mensaje de éxito
@@ -92,7 +93,13 @@ const Quiz = () => {
   return (
     <section>
       <article>
-        {printQuestions()}
+      {showResults ? (
+          <div>
+            <h2>Tu puntuación es: {score}</h2>
+          </div>
+        ) : (
+          printQuestions()
+        )}
       </article>
     </section>
   );
