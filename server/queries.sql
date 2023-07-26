@@ -15,7 +15,7 @@ CREATE TABLE users (
 
 
 CREATE TABLE quiz_answers (
-    user_id INT FOREIGN KEY,
+    user_id INT,
     Q1 VARCHAR (1),
     Q2 VARCHAR  (1),
     Q3 VARCHAR  (1),
@@ -26,6 +26,7 @@ CREATE TABLE quiz_answers (
     Q8 VARCHAR  (1),
     Q9 VARCHAR  (1),
     Q10 VARCHAR  (1),
+    total INT
     FOREIGN KEY (user_id) REFERENCES users(user_id)
     ON DELETE CASCADE
 );
