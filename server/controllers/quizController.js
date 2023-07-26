@@ -1,4 +1,7 @@
 const quiz = require('../models/quiz');
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+const jwtSecret = process.env.JWT_SECRET;
 
 const saveAnswers = async (req, res) => {
     let user_id = req.decoded.data[0].user_id;
@@ -15,6 +18,30 @@ const saveAnswers = async (req, res) => {
     }
 };
 
+const getUserQuizAnswers = async (req, res) => {
+    try {
+        const token = req.cookies["access-token"];
+        const decoded = jwt.verify(token, jwtSecret);
+        const user_id = req.decoded.data[0].user_id;
+        let data = await quiz.getUserAnswers(user_id);
+        console.log(data);
+
+        if (!data[0]) {
+            console.log("There are no previous games");
+        } else {
+            let quizGames = data.map(item => item.total);
+            console.log("Previous games: ",quizGames);
+            res.status(200).json({
+                "msj": "User previous games supplied"
+            });
+        }
+
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+}
+
 module.exports = {
-    saveAnswers
+    saveAnswers,
+    getUserQuizAnswers
 }

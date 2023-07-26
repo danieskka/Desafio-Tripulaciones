@@ -13,6 +13,7 @@ CREATE TABLE users (
     login BOOLEAN DEFAULT false
 );
 
+-- Create quiz answers table
 
 CREATE TABLE quiz_answers (
     user_id INT,
@@ -30,7 +31,6 @@ CREATE TABLE quiz_answers (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
     ON DELETE CASCADE
 );
-
 
 -- Crear usuario Ej:
 INSERT INTO userss (email, password, username, birth_date, gender, zip_code, number_of_children)
