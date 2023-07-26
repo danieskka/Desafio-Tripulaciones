@@ -15,18 +15,19 @@ CREATE TABLE users (
 
 
 CREATE TABLE quiz_answers (
-    user_id SERIAL PRIMARY KEY,
-    Q1 VARCHAR,
-    Q2 VARCHAR,
-    Q3 VARCHAR,
-    Q4 VARCHAR,
-    Q5 VARCHAR,
-    Q6 VARCHAR,
-    Q7 VARCHAR,
-    Q8 VARCHAR,
-    Q9 VARCHAR,
-    Q10 VARCHAR,
-    FOREIGN KEY (user_id) REFERENCES users(users_id)
+    user_id INT FOREIGN KEY,
+    Q1 VARCHAR (1),
+    Q2 VARCHAR  (1),
+    Q3 VARCHAR  (1),
+    Q4 VARCHAR  (1),
+    Q5 VARCHAR  (1),
+    Q6 VARCHAR  (1),
+    Q7 VARCHAR  (1),
+    Q8 VARCHAR  (1),
+    Q9 VARCHAR  (1),
+    Q10 VARCHAR  (1),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    ON DELETE CASCADE
 );
 
 
