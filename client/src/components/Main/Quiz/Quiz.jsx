@@ -36,9 +36,7 @@ const Quiz = () => {
     }
     setScore(counter)
 
-
     const userResults =   {
-      user_id: 1,
       q1: answers[0],
       q2: answers[1],
       q3: answers[2],
@@ -48,7 +46,8 @@ const Quiz = () => {
       q7: answers[6],
       q8: answers[7],
       q9: answers[8],
-      q10: answers[9]
+      q10: answers[9],
+      total: counter
     };
 
       axios.post(url, userResults)
@@ -61,23 +60,33 @@ const Quiz = () => {
   }
 
 
-  const printQuestions = () => data.map((question, questionIndex) => (
-      <div key={questionIndex}>
-        <h3>Pregunta {questionIndex +1}: {question.question}</h3>
-              {question.options.map((option, optionIdx) => (
-                    <label key={optionIdx}>
-                        <input type="radio" name={question.name} value={option.radioValue} checked={option.selected} //para cambiar el color del botón seleccionado, cambiar option.selected por false. Después en handleOptionSelect cambiar nombre de clase. 
-                        onChange={() => handleOptionSelect(questionIndex, optionIdx)}  />  
-                    {option.choice}
-                    </label>
-              ))}
-      {currentQuestionIndex < data.length - 1 ? (
-        <button onClick={handleNextQuestion}>SIGUIENTE</button>
-      ) : (
-        <button onClick={onSubmit}>Resultados</button>
-      )}
+  const printQuestions = () => {
+    const questionIndex = currentQuestionIndex;
+    const question = data[questionIndex];
+    
+    return (
+      <div>
+        <h3>Pregunta {questionIndex + 1}: {question.question}</h3>
+        {question.options.map((option, optionIdx) => (
+          <label key={optionIdx}>
+            <input
+              type="radio"
+              name={question.name}
+              value={option.radioValue}
+              checked={option.selected}
+              onChange={() => handleOptionSelect(questionIndex, optionIdx)}
+            />
+            {option.choice}
+          </label>
+        ))}
+        {currentQuestionIndex < data.length - 1 ? (
+          <button onClick={handleNextQuestion}>SIGUIENTE</button>
+        ) : (
+          <button onClick={onSubmit}>Resultados</button>
+        )}
       </div>
-  ))
+    );
+  };
 
 
   return (
