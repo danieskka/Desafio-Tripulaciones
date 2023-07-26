@@ -4,7 +4,8 @@ require("dotenv").config();
 const jwtSecret = process.env.JWT_SECRET;
 
 const saveAnswers = async (req, res) => {
-    let { user_id, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, total} = req.body;
+    let user_id = req.decoded.data[0].user_id;
+    let { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, total} = req.body;
     try {
         await quiz.postAnswers({ user_id, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, total});
 
