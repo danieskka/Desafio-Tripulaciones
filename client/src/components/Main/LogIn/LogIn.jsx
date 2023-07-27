@@ -3,22 +3,14 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const LogIn = () => {
+  
   const { register, handleSubmit } = useForm();
-
 
   const handleLogin = async (data) => {
     try {
       await axios.post("/login", data);
     } catch (error) {
       console.log("Error:", error);
-    }
-  };
-
-  const handleLogOut = async () => {
-    try {
-      await axios.post('/logout');
-    } catch (error) {
-      console.log('Error during logout:', error);
     }
   };
 
@@ -33,10 +25,6 @@ const LogIn = () => {
 
         <button type="submit">Log in</button>
       </form>
-
-      <button onClick={handleLogOut}>
-          Log Out
-      </button>
     </>
   )
 };
