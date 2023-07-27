@@ -3,6 +3,7 @@ import axios from "axios";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
 const Profile = () => {
+  
   const [stats, setStats] = useState([]);
 
   useEffect(() => {
