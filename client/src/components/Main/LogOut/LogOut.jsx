@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios"
 
 const LogOut = () => {
+  
   const handleLogOut = async () => {
     try {
       await axios.post('/logout');

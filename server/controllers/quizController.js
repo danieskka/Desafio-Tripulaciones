@@ -32,7 +32,8 @@ const getUserQuizAnswers = async (req, res) => {
             let quizGames = data.map(item => item.total);
             console.log("Previous games: ",quizGames);
             res.status(200).json({
-                "msj": "User previous games supplied"
+                "msj": "User previous games supplied",
+                "previousGames": quizGames
             });
         }
 

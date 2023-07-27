@@ -9,8 +9,6 @@ import LogOut from './LogOut/LogOut';
 import Zone from './Home/Info/Zone/Zone';
 import Resources from './Home/Info/Resources/Resources';
 
-
-
 const Main = () => {
   return (
     <main>
@@ -28,5 +26,4 @@ const Main = () => {
     </main>
 )
 };
-
 export default Main;
