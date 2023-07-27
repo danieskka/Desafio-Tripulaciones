@@ -27,7 +27,7 @@ const MapView = () => {
 
   return (
 
-    <article>
+    <article className='mapcontainer'>
             {currentPosition ? (
                 <MapContainer center={currentPosition} zoom={14} scrollWheelZoom={true}>
                     <TileLayer

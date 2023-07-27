@@ -1,0 +1,32 @@
+.zonegeneral {
+    background-color: rgb(212, 212, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h2 {
+        color: red;
+    }
+
+    .leaflet-container {
+        width: 50%;
+        height: 35vh;
+        border:black solid 5px;
+      }
+    .mapcontainer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mapinfogeneral{
+        margin-top: 20px;
+        width: 75%;
+        background-color: rgb(127, 127, 127);
+    }
+
+    .infofilters{
+        display: flex;
+        justify-content:space-evenly;
+    }
+}
