@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import InfoView from "./InfoView";
+import Zone from "./Zone";
 
-describe("InfoView", () => {
+describe("Zone", () => {
   test("matches snapshot", () => {
-    const wrapper = shallow(<InfoView />);
+    const wrapper = shallow(<Zone />);
     expect(wrapper).toMatchSnapshot();
   });
 });
