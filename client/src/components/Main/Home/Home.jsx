@@ -1,8 +1,6 @@
 
 
 
-
-
 const Home = () => {
   return (
     <section>
