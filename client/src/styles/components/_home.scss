@@ -1,3 +1,21 @@
 .progressMapGame{
     max-width: 300px;
 }
+.homeWrapper, .progressHomeContainer, .galleryHomeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.galleryHomeContainer{
+    width: 90%;
+    a{
+        width: 65%;
+    }
+
+}
+.galleryButtons{
+
+    max-height: 40px;
+
+
+}

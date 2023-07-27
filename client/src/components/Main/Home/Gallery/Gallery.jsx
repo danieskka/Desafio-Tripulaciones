@@ -6,8 +6,8 @@ const Gallery = ({ head, img, url }) => {
     <>
       <a href={url}>
           <div className="galleryCard">
-            <h3> {head} </h3>
             <img src={img} alt="noticia" />
+            <h3> {head} </h3>
           </div>
       </a>
     </>
