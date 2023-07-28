@@ -51,7 +51,7 @@ const NavBar = () => {
 
   return (
     <Stack direction="row" spacing={17}>
-      <div >
+      <header>
           <Button
             ref={anchorRef}
             id="composition-button"
@@ -97,7 +97,7 @@ const NavBar = () => {
             </Grow>
           )}
         </Popper>
-      </div>
+      </header>
     </Stack>
   );
 
