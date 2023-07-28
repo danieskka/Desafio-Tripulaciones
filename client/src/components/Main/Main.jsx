@@ -13,13 +13,13 @@ const Main = () => {
   return (
     <main>
       <Routes>
-        <Route path="/*" element={<Home/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/register" element={<SignUp/>}/>
         <Route path="/signin" element={<LogIn/>}/>
         <Route path="/signout" element={<LogOut/>}/>
         <Route path="/info" element={<Info/>}/>
-        <Route path="/profile/*" element={<Profile/>}/>
-        <Route path="/game/*" element={<Game/>}/>
+        <Route path="/profile/" element={<Profile/>}/>
+        <Route path="/game/" element={<Game/>}/>
         <Route path="/zone" element={<Zone/>}/>
         <Route path="/resources" element={<Resources/>}/>  
       </Routes>
