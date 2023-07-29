@@ -1,0 +1,26 @@
+.sectionQuiz{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.questionContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+.labelOptionQuiz{
+    border-radius: 10px;
+    background-color: rgb(252, 197, 116);
+    padding: 13px 10px;
+    line-height: 23px;
+    width: 90%;
+    margin: 0 auto 1em;
+}
+.labelOptionQuiz:hover{
+    background-color: rgb(253, 166, 90);
+    cursor: pointer;
+}
+.optionSelected{
+    background-color: rgb(85, 198, 246);
+}

@@ -1,34 +1,39 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import {Link} from "react-router-dom";
 import { data } from "./index";
 import axios from 'axios';
 
 
 const Quiz = () => {
-  const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState(Array(data.length).fill(null));  //almacena las respuestas elegidas por el usuario.
-  const options = ['A', 'B', 'C', 'D'];
-  const correctAnswers = ['D', 'B', 'A', 'C', 'B', 'C', 'C', 'D', 'C', 'C'];
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [showResults, setShowResults] = useState(false);
-  const url = '/quiz'
+  const correctAnswers = ['D', 'B', 'A', 'C', 'B', 'C', 'C', 'D', 'C', 'C'];  //Preguntas correctas.    
+
+  //Paginación de preguntas.
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);  //Indice de preguntas para paginación.
+  const handleNextQuestion = () => {
+    setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+    setCountDown(90)
+    // console.log(answers);
+  }
 
 
-  const handleOptionSelect = (questionIndex, optionIdx) => {
-    if (options[optionIdx] !== answers[questionIndex]) {
-      const newAnswers = [...answers];
-      newAnswers[questionIndex] = options[optionIdx];
-      setAnswers(newAnswers);
+  // Al clicar en input/option
+  const [selectedOption, setSelectedOption] = useState("");
+  const handleOptionSelect = (questionIndex, optionValue) => {
+    if (optionValue !== answers[questionIndex]) {
+      const newAnswers = [...answers];                    // Almacena los valores answers en newAnswers.
+      newAnswers[questionIndex] = optionValue;        //Otorga al índice de newAnswers coincidente con indice de pregunta el valor seleccionado. 
+      setAnswers(newAnswers);   //actualiza answers con el valor del array newAnswers.
+      setSelectedOption(optionValue)
     }
   }
-
   
- const handleNextQuestion = () => {
-    setCurrentQuestionIndex(prevIndex => prevIndex + 1);
-  }
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    let counter = 0;
+  // CLICK en botón final 'RESULTADOS'  -----------------------------------------------
+  const [score, setScore] = useState(0);  // Guarda la puntuación de partida.
+  const url = '/quiz'   // url para enviar resultados de partida a BBDD.
+  const onSubmit = () => {
+    // e.preventDefault();
+    let counter = 0;        // Compara array de correctas con array de seleccionadas y actualiza marcador 'score'
     for (let i = 0; i < answers.length; i++) {
       if (answers[i] === correctAnswers[i]) {
         counter++
@@ -36,7 +41,7 @@ const Quiz = () => {
 
     }
     setScore(counter)
-    setShowResults(true); 
+    setShowResults(true); // Muestra mensaje de resultados según puntuación.
 
     const userResults =   {
       q1: answers[0],
@@ -59,36 +64,66 @@ const Quiz = () => {
           error.status(500);
         });
   }
+  // ------------------------------------------------------------------------
 
+
+  //Timer COUNTDOWN  ---------------------------------
+    const timer = useRef;
+    const [countDown, setCountDown] = useState (90);  //Cuenta atrás.
+    useEffect(() => {
+      timer.current = setInterval(() => {
+
+        setCountDown(prev => prev - 1)
+
+      }, 1000)
+
+      return () => clearInterval(timer.current)
+    }, [])
+
+    useEffect(() => {
+      if (countDown === 0) {
+        if (currentQuestionIndex < data.length - 1) {
+          handleNextQuestion(); 
+        } else {
+          onSubmit(); 
+        }
+        setCountDown(90);
+      }
+    }, [countDown, currentQuestionIndex]);
+   // -----------------------------------------------------
+  
 
   const printQuestions = () => {
-    const questionIndex = currentQuestionIndex;
-    const question = data[questionIndex];
+      const questionIndex = currentQuestionIndex;
+      const question = data[questionIndex];
     
-    return (
-      <div>
-        <h3>Pregunta {questionIndex + 1}: {question.question}</h3>
-        {question.options.map((option, optionIdx) => (
-          <label key={optionIdx}>
-            <input
-              type="radio"
-              name={question.name}
-              value={option.radioValue}
-              checked={option.selected}
-              onChange={() => handleOptionSelect(questionIndex, optionIdx)}
-            />
-            {option.choice}
-          </label>
-        ))}
-        {currentQuestionIndex < data.length - 1 ? (
-          <button onClick={handleNextQuestion}>SIGUIENTE</button>
-        ) : (
-          <button onClick={onSubmit}>Resultados</button>
-        )}
-      </div>
-    );
+        return (
+          <div className="questionContainer">
+            <h2> Tiempo Restante: {countDown} </h2>
+            <Link to="/game">  <button> SALIR DEL JUEGO </button>  </Link>
+            <h3>Pregunta {questionIndex + 1}: {question.question}</h3>
+            {question.options.map((option, optionIdx) => (
+              <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
+              onClick={() => handleOptionSelect(questionIndex, option.radioValue)} >
+                <input  type="radio" name={question.name}
+                  value={option.radioValue}
+                  checked={option.radioValue === answers[questionIndex]}
+                  onChange={() => {}} />
+                {option.choice}
+              </label>
+            ))}
+            {currentQuestionIndex < data.length - 1 ? (
+              <button onClick={handleNextQuestion}>SIGUIENTE</button>
+            ) : (
+              <button onClick={onSubmit}>Resultados</button>
+            )}
+          </div>
+        );
   };
 
+
+ // Mensajes de resultados según puntuación. 
+  const [showResults, setShowResults] = useState(false);  // Para mostar mensaje de Resultados.
   const getResultsMessage = (score) => {
     if (score === 0) {
       return `¡Ups! No has obtenido ningún acierto. No te preocupes, siempre hay oportunidad para aprender más sobre las olas de calor. Te animo a investigar un poco más y así estar preparado/a para enfrentar este fenómeno natural. ¡Ánimo!`;
@@ -105,8 +140,9 @@ const Quiz = () => {
     }
   }
 
+
   return (
-    <section>
+    <section className="sectionQuiz">
       <article>
       {showResults ? (
           <div>

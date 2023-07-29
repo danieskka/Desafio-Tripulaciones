@@ -109,10 +109,10 @@ const NavBar = () => {
     
     <nav className="navbar">
         <ul className="ul_navbar">
-            <Link className='link' to="/">HOME</Link>
-            <Link className='link' to="/Manga">JUEGO</Link>
-            <Link className='link' to="/superheroes">FORMACIÓN</Link>
-            <Link className='link' to="/generos">PERFIL</Link>
+            <Link className='link' to="/home">HOME</Link>
+            <Link className='link' to="/game">JUEGO</Link>
+            <Link className='link' to="/info">FORMACIÓN</Link>
+            <Link className='link' to="/profile">PERFIL</Link>
         </ul>
     </nav>
     </>

@@ -8,6 +8,8 @@ import LogIn from './LogIn/LogIn';
 import LogOut from './LogOut/LogOut';
 import Zone from './Home/Info/Zone/Zone';
 import Resources from './Home/Info/Resources/Resources';
+import MiniLecture from './Home/Game/MiniLecture/MiniLecture';
+import Quiz from './Home/Game/Quiz/Quiz';
 
 const Main = () => {
   return (
@@ -18,10 +20,13 @@ const Main = () => {
         <Route path="/signin" element={<LogIn/>}/>
         <Route path="/signout" element={<LogOut/>}/>
         <Route path="/info" element={<Info/>}/>
-        <Route path="/profile/" element={<Profile/>}/>
-        <Route path="/game/" element={<Game/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/game" element={<Game/>}/>
+        <Route path="/minilecture" element={<MiniLecture/>}/>
+        <Route path="/gamequiz" element={<Quiz/>}/>
         <Route path="/zone" element={<Zone/>}/>
         <Route path="/resources" element={<Resources/>}/>  
+
       </Routes>
     </main>
 )
