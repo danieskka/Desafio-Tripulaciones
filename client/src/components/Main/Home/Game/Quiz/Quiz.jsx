@@ -129,20 +129,23 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
               <img onClick={QuitGame} src="assets/close.png" alt="abandonar juego" />
             </div>
             <h3>Pregunta {questionIndex + 1}: {question.question}</h3>
+            <div className="optionsWrapper">
             {question.options.map((option, optionIdx) => (
-              <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
-              onClick={() => handleOptionSelect(questionIndex, option.radioValue)} >
-                <input  type="radio" name={question.name}
-                  value={option.radioValue}
-                  checked={option.radioValue === answers[questionIndex]}
-                  onChange={() => {}} />
-                {option.choice}
-              </label>
+
+                    <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
+                    onClick={() => handleOptionSelect(questionIndex, option.radioValue)} >
+                      <input  type="radio" name={question.name}
+                        value={option.radioValue}
+                        checked={option.radioValue === answers[questionIndex]}
+                        onChange={() => {}} />
+                      {option.choice}
+                    </label>
             ))}
+            </div>
             {currentQuestionIndex < data.length - 1 ? (
               <button onClick={handleNextQuestion} className="quizNextQuestion">SIGUIENTE</button>
             ) : (
-              <button onClick={onSubmit}>Resultados</button>
+              <button onClick={onSubmit} className="quizNextQuestion">RESULTADOS</button>
             )}
           </div>
         );

@@ -66,7 +66,7 @@ const NavBar = () => {
             aria-haspopup="true"
             onClick={handleToggle}
           >
-          <Hamburger toggled={isOpen} toggle={setIsOpen} size={28} direction="right" duration={0.6} rounded color="#1d1a47" />        
+          <Hamburger toggled={isOpen} toggle={setIsOpen} size={28} direction="right" duration={0.6} rounded color="#ff7a62" />        
           </Button>
         <Popper
           open={open}

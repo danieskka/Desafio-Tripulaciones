@@ -46,52 +46,79 @@
 .quizNextQuestion{
     width: 9em;
     margin: 1em auto 0;
+    background: $main-gradient-color;
+    color: white;
 }
 .progressBarWrapper{
-width: 100%;
-height: 1.3em;
+width: 92%;
+height: 0.7em;
 border: solid rgb(115, 13, 13) 3px;
 display: flex;
 flex-direction: row;
-
+margin: auto;
 }
 .progressBarQuiz0{
-background-color: red;
+background:$main-gradient-color;
 width: 10%;
 }
 .progressBarQuiz1{
-    background-color: red;
+    background:$main-gradient-color;
     width: 20%;
     }
     .progressBarQuiz2{
-        background-color: red;
+        background:$main-gradient-color;
         width: 30%;
         }
         .progressBarQuiz3{
-            background-color: red;
+            background:$main-gradient-color;    
             width: 40%;
             }
             .progressBarQuiz4{
-                background-color: red;
+                background:$main-gradient-color;    
                 width: 50%;
                 }
                 .progressBarQuiz5{
-                    background-color: red;
+                    background:$main-gradient-color;    
                     width: 60%;
                     }
                     .progressBarQuiz6{
-                        background-color: red;
+                        background:$main-gradient-color;    
                         width: 70%;
                         }
                         .progressBarQuiz7{
-                            background-color: red;
+                            background:$main-gradient-color;    
                             width: 80%;
                             }
                             .progressBarQuiz8{
-                                background-color: red;
+                                background:$main-gradient-color;    
                                 width: 90%;
                                 }
                                 .progressBarQuiz9{
-                                    background-color: red;
+                                    background:$main-gradient-color;    
                                     width: 100%;
                                     }
+
+                                    .optionsWrapper {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+@media (min-width: 1050px) {
+    .optionsWrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+
+    }
+    .labelOptionQuiz{
+        margin: 1.5em 1em;
+        width: 45%;
+    }
+}
+@media (min-width: 650px) {
+
+    .sectionQuiz{
+        width: 80%;
+        margin: auto;
+    }
+}

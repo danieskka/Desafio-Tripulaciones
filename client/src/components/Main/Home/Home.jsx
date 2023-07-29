@@ -39,7 +39,7 @@ const Home = () => {
       <article className="progressHomeContainer">
         <h2>Mira tu progreso</h2>
         <img className="progressMapGame" src="https://img.freepik.com/vector-premium/mapa-niveles-juego-espacial-planetas-estrellas-fondo-espacio-botones-kit-interfaz-usuario-aplicacion-progreso-jugador_596401-437.jpg?w=2000" alt="Progreso" />
-        <button>SEGUIR APRENDIENDO</button>
+        <button className="quizNextQuestion">SEGUIR APRENDIENDO</button>
       </article>
       <article className="galleryHomeContainer">
         <h2>Para ti</h2>

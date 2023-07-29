@@ -14,9 +14,11 @@ p, label{
     font-family: Montserrat;
 }
 button{
-    border-radius: 10px;
+    border-radius: 8px;
     font-family: Montserrat;
-    padding: 8px 0;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
 }
 button:hover{
     cursor: pointer;
