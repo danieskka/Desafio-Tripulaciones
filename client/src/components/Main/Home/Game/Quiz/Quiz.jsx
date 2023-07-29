@@ -121,6 +121,9 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
     
         return (
           <div className="questionContainer">
+            <div className="progressBarWrapper">
+              <div className={`progressBarQuiz${questionIndex}`}></div>
+            </div>
             <div className="quizHeaderWrapper">
               <h2> Tiempo Restante: {countDown} </h2>
               <img onClick={QuitGame} src="assets/close.png" alt="abandonar juego" />
