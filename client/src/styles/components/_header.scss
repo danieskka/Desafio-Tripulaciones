@@ -1,3 +1,5 @@
+@import './../utils/variables.scss';
+
 @media (min-width: 550px) {
     .hide-on-large-screen {
       display: none;
@@ -56,6 +58,7 @@ ul{
     li{
         color: white;
         font-weight: bold;
+        font-family: Kanit;
         font-size: 1.3em;
         letter-spacing: 2px;
         padding-left: 20px;
@@ -66,5 +69,6 @@ ul{
     }
     a{
         width: 100%;
+        text-decoration: none;
     }
 }

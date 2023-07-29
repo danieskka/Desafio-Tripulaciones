@@ -1,12 +1,34 @@
 import { useState, useRef, useEffect } from "react";
-import {Link} from "react-router-dom";
 import { data } from "./index";
 import axios from 'axios';
+import Swal from "sweetalert2";
 
 
 const Quiz = () => {
   const [answers, setAnswers] = useState(Array(data.length).fill(null));  //almacena las respuestas elegidas por el usuario.
   const correctAnswers = ['D', 'B', 'A', 'C', 'B', 'C', 'C', 'D', 'C', 'C'];  //Preguntas correctas.    
+
+const QuitGame = () => {  //Alerta cuando se abandona el juego.
+  const alertQuitGame = () => {
+    Swal.fire({
+      title: '¿Seguro que quieres abandonar?',
+      text: "Tu progreso en este juego no se guardará",
+      icon: 'question',
+      showDenyButton: true,
+      denyButtonText: 'Cancelar',
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, salir'
+    }).then(result => {
+      if (result.isConfirmed) {
+        window.location.href = "/game";
+      }
+    })
+  }
+  alertQuitGame()
+}
+  
+
 
   //Paginación de preguntas.
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);  //Indice de preguntas para paginación.
@@ -99,8 +121,10 @@ const Quiz = () => {
     
         return (
           <div className="questionContainer">
-            <h2> Tiempo Restante: {countDown} </h2>
-            <Link to="/game">  <button> SALIR DEL JUEGO </button>  </Link>
+            <div className="quizHeaderWrapper">
+              <h2> Tiempo Restante: {countDown} </h2>
+              <img onClick={QuitGame} src="assets/close.png" alt="abandonar juego" />
+            </div>
             <h3>Pregunta {questionIndex + 1}: {question.question}</h3>
             {question.options.map((option, optionIdx) => (
               <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
@@ -113,7 +137,7 @@ const Quiz = () => {
               </label>
             ))}
             {currentQuestionIndex < data.length - 1 ? (
-              <button onClick={handleNextQuestion}>SIGUIENTE</button>
+              <button onClick={handleNextQuestion} className="quizNextQuestion">SIGUIENTE</button>
             ) : (
               <button onClick={onSubmit}>Resultados</button>
             )}

@@ -1,3 +1,5 @@
+@import './../utils/variables.scss';
+
 .sectionQuiz{
     width: 100%;
     display: flex;
@@ -8,6 +10,9 @@
     display: flex;
     flex-direction: column;
     padding: 0 16px;
+    label{
+        font-size: 0.9em;
+    }
 }
 .labelOptionQuiz{
     border-radius: 10px;
@@ -23,4 +28,23 @@
 }
 .optionSelected{
     background-color: rgb(85, 198, 246);
+}
+.quizHeaderWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 20px;
+        max-height: 20px;
+    }
+    img:hover{
+        cursor: pointer;
+    }
+}
+.quizNextQuestion{
+    width: 9em;
+    margin: 1em auto 0;
+    font-family: Montserrat;
 }

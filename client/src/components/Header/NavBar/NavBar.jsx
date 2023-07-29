@@ -93,7 +93,7 @@ const NavBar = () => {
                     onKeyDown={handleListKeyDown}
                     className='menuHam'
                   >
-                    <Link to="/">< MenuItem  onClick={handleClose}>Home</MenuItem></Link>
+                    <Link to="/home">< MenuItem  onClick={handleClose}>Home</MenuItem></Link>
                     <Link to="/game"><MenuItem onClick={handleClose}>Juego</MenuItem></Link>
                     <Link to="/info"><MenuItem onClick={handleClose}>Formación</MenuItem></Link>
                     <Link to="/profile"><MenuItem onClick={handleClose}>Perfil</MenuItem></Link>
