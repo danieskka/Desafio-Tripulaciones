@@ -1,0 +1,15 @@
+.profile-bar-chart {
+    width: 800;
+    height: 400;
+    .recharts-cartesian-grid-horizontal {
+      stroke-opacity: 0.1; // Opacidad de las líneas horizontales de la cuadrícula
+    }
+  
+.recharts-tooltip-wrapper {
+      background-color: #c59292; // Color de fondo del tooltip
+      padding: 8px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(235, 171, 171, 0.1); // Sombra del tooltip
+    }
+}
+  
