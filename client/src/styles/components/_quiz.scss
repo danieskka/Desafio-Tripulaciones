@@ -50,49 +50,48 @@
 .progressBarWrapper{
 width: 100%;
 height: 1.3em;
-border: solid black 3px;
+border: solid rgb(115, 13, 13) 3px;
+display: flex;
+flex-direction: row;
+
 }
-.progressBarQuiz1{
+.progressBarQuiz0{
 background-color: red;
 width: 10%;
 }
 .progressBarQuiz1{
     background-color: red;
-    width: 10%;
+    width: 20%;
     }
     .progressBarQuiz2{
         background-color: red;
-        width: 20%;
+        width: 30%;
         }
         .progressBarQuiz3{
             background-color: red;
-            width: 30%;
+            width: 40%;
             }
             .progressBarQuiz4{
                 background-color: red;
-                width: 40%;
+                width: 50%;
                 }
                 .progressBarQuiz5{
                     background-color: red;
-                    width: 50%;
+                    width: 60%;
                     }
                     .progressBarQuiz6{
                         background-color: red;
-                        width: 60%;
+                        width: 70%;
                         }
                         .progressBarQuiz7{
                             background-color: red;
-                            width: 70%;
+                            width: 80%;
                             }
                             .progressBarQuiz8{
                                 background-color: red;
-                                width: 80%;
+                                width: 90%;
                                 }
                                 .progressBarQuiz9{
                                     background-color: red;
-                                    width: 90%;
+                                    width: 100%;
                                     }
-                                    .progressBarQuiz10{
-                                        background-color: red;
-                                        width: 100%;
-                                        }
