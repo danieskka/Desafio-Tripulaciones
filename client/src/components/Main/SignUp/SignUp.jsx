@@ -1,10 +1,22 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useState } from "react";
 import axios from "axios";
+import Register from "./Register";
+import HeatyLogo from "../../../assets/Group 2Icon.png";
+
+const RegisterButton = ({ icon, provider }) => {
+  
+  return (
+    <button className="register-button" disabled>
+      <img src={icon} alt={provider} className="icon-img" /> Register with{" "}
+      {provider}
+    </button>
+  );
+};
 
 const SignUp = () => {
 
-  const { register, handleSubmit } = useForm();
+  const [showRegister, setShowRegister] = useState(false);
 
   const handleSignup = async (data) => {
     try {
@@ -14,51 +26,30 @@ const SignUp = () => {
     }
   };
 
+  const handleRegisterClick = () => {
+    setShowRegister(true);
+  };
+
   return (
     <>
-      <form onSubmit={handleSubmit(handleSignup)} className="sign-up-form">
-        <label>Email:</label>
-        <input type="email" {...register("email", { required: true })} />
+      {!showRegister ? (
+        <div className="signup-container">
+          <div className="centered-content">
+            <img src={HeatyLogo} alt="Logo de Heaty" className="signup-image"/>
 
-        <label>Password:</label>
-        <input type="password" {...register("password", { required: true })} />
+            <RegisterButton icon="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" provider="Google" />
+            <RegisterButton icon="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" provider="Facebook" />
+            <RegisterButton icon="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png" provider="Apple" />
 
-        <label>Username:</label>
-        <input type="text" {...register("username", { required: true })} />
-
-        <label>Birth Date:</label>
-        <input type="date" {...register("birth_date", { required: true })} />
-
-        <label>Gender:</label>
-        <select {...register("gender", { required: true })}>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="non-binary">Non-binary</option>
-          <option value="not-specified">Not Specified</option>
-        </select>
-
-        <label>Zip Code:</label>
-        <input type="text" {...register("zip_code")} />
-
-        <label>Number of Children:</label>
-        <select {...register("number_of_children")}>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">+10</option>
-        </select>
-
-        <button type="submit">Sign up</button>
-      </form>
+            <button onClick={handleRegisterClick}>Register</button>
+          </div>
+        </div>
+      ) : (
+        <Register handleSignup={handleSignup} />
+      )}
     </>
-  )
+  );
 };
 
 export default SignUp;
+

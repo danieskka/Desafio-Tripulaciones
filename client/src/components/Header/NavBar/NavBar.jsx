@@ -1,15 +1,20 @@
-import { Squash as Hamburger } from 'hamburger-react';
-
 import { useState } from 'react';
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
+import {Link} from "react-router-dom";
+
+
+// importación del icono Hamburger
+    import { Squash as Hamburger } from 'hamburger-react';
+
+//importación del menú.
+    import * as React from 'react';
+    import Button from '@mui/material/Button';
+    import ClickAwayListener from '@mui/material/ClickAwayListener';
+    import Grow from '@mui/material/Grow';
+    import Paper from '@mui/material/Paper';
+    import Popper from '@mui/material/Popper';
+    import MenuItem from '@mui/material/MenuItem';
+    import MenuList from '@mui/material/MenuList';
+    import Stack from '@mui/material/Stack';
 
 
 
@@ -39,7 +44,7 @@ const NavBar = () => {
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
+  // useEffect from menu MUI
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
@@ -50,8 +55,9 @@ const NavBar = () => {
   }, [open]);
 
   return (
+    <>
     <Stack direction="row" spacing={17}>
-      <div >
+      <div className="hide-on-large-screen">
           <Button
             ref={anchorRef}
             id="composition-button"
@@ -60,7 +66,7 @@ const NavBar = () => {
             aria-haspopup="true"
             onClick={handleToggle}
           >
-          <Hamburger toggled={isOpen} toggle={setIsOpen} size={28} direction="right" duration={0.6} rounded color="#1d1a47" />        
+          <Hamburger toggled={isOpen} toggle={setIsOpen} size={28} direction="right" duration={0.6} rounded color="#ff7a62" />        
           </Button>
         <Popper
           open={open}
@@ -87,10 +93,10 @@ const NavBar = () => {
                     onKeyDown={handleListKeyDown}
                     className='menuHam'
                   >
-                    <MenuItem onClick={handleClose}>Home</MenuItem>
-                    <MenuItem onClick={handleClose}>Juego</MenuItem>
-                    <MenuItem onClick={handleClose}>Formación</MenuItem>
-                    <MenuItem onClick={handleClose}>Perfil</MenuItem>
+                    <Link to="/home">< MenuItem  onClick={handleClose}>Home</MenuItem></Link>
+                    <Link to="/game"><MenuItem onClick={handleClose}>Juego</MenuItem></Link>
+                    <Link to="/info"><MenuItem onClick={handleClose}>Formación</MenuItem></Link>
+                    <Link to="/profile"><MenuItem onClick={handleClose}>Perfil</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -99,6 +105,18 @@ const NavBar = () => {
         </Popper>
       </div>
     </Stack>
+    
+    
+    <nav className="navbar">
+        <ul className="ul_navbar">
+            <Link className='link' to="/home">HOME</Link>
+            <Link className='link' to="/game">JUEGO</Link>
+            <Link className='link' to="/info">FORMACIÓN</Link>
+            <Link className='link' to="/profile">PERFIL</Link>
+        </ul>
+    </nav>
+    </>
+
   );
 
 };
