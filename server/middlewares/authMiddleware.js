@@ -12,10 +12,11 @@ const signUpUser = async(req, res, next) => {
     try {
         const {email, password, username, birth_date, gender, zip_code, number_of_children} = req.body;
         const hashPassword = await bcrypt.hash(password, saltRounds);
-        const newUser = {email, "password":hashPassword, username, birth_date, gender, zip_code, number_of_children}
+        const newUser = {email, "password":hashPassword, username, birth_date, gender, zip_code, number_of_children, login:true}
         data = await users.createUser(newUser);
         console.log(data)
         await users.updateUser(email);
+        await users.logInUserTrue(email);
         console.log(email)
 
         req.user = {email};
