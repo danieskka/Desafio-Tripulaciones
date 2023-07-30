@@ -87,11 +87,20 @@ const Register = ({ handleSignup }) => {
             <input type="password" {...register("password", { required: true })} />
 
             <label>Confirm Password:</label>
+            <input type="password" {...register("confirm_password", { required: true })}/>
+
+            <label>
             <input
-              type="password"
-              {...register("confirm_password", { required: true })}
-            />
+                type="checkbox"
+                {...register("acceptTerms", { required: true })}
+              />
+                Acepto los{" "}
+                <Link to="/terminos-y-condiciones" target="_blank">
+                  términos de uso y políticas de privacidad.
+                </Link>
+            </label>
           </>
+
         )}
 
         <button type="submit">

@@ -39,51 +39,6 @@
         background-color: #FF7A62;
       }
     }
-  }
-
-  .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.login-success {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  
-    p {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-  
-    .home-link {
-      display: block;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 12px 24px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-      width: 9em;
-      margin: 1em auto 0;
-      background: linear-gradient(90deg, rgb(218, 84, 60) 35%, rgb(250, 234, 135) 100%);
-      color: white;
-    }
-  
-    .home-link:hover {
-      background-color: #DA543C;
-      color: #fff;
-    }
 }
 
 .h1-form {
