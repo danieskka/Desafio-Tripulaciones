@@ -170,6 +170,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
   }
 
 
+
   return (
     <section className="sectionQuiz">
       <article>
