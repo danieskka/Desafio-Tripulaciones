@@ -8,7 +8,7 @@ function GetTodayInfo({weatherData}) {
     <article>
       {weatherData && (
        
-        <div id="show_today">
+        <div id="show_what_you_got">
           <p>Ciudad: {weatherData.ciudad}</p>
           <p>Fecha y Hora: {weatherData.fecha_hora}</p>
           <p>Temperatura: {weatherData.temperatura }°C</p>
