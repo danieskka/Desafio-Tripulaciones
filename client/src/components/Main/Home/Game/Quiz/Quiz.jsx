@@ -151,7 +151,6 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
         );
   };
 
-
  // Mensajes de resultados según puntuación. 
   const [showResults, setShowResults] = useState(false);  // Para mostar mensaje de Resultados.
   const getResultsMessage = (score) => {
