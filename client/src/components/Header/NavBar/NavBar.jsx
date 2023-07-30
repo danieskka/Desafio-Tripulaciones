@@ -57,7 +57,7 @@ const NavBar = () => {
   return (
     <>
     <Stack direction="row" spacing={17}>
-      <div className="hide-on-large-screen">
+      <div >
           <Button
             ref={anchorRef}
             id="composition-button"

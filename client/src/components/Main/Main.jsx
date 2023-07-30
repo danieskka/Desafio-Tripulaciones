@@ -10,11 +10,13 @@ import Zone from './Home/Info/Zone/Zone';
 import Resources from './Home/Info/Resources/Resources';
 import MiniLecture from './Home/Game/MiniLecture/MiniLecture';
 import Quiz from './Home/Game/Quiz/Quiz';
+import Welcome from './Welcome/Welcome';
 
 const Main = () => {
   return (
     <main>
       <Routes>
+        <Route path="/" element={<Welcome/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/register" element={<SignUp/>}/>
         <Route path="/signin" element={<LogIn/>}/>
