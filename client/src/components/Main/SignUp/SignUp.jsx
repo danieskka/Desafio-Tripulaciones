@@ -2,13 +2,13 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import Register from "./Register";
-import HeatyLogo from "../../../assets/Group 2Icon.png";
+import HeatyLogo from "../../../assets/HeatyLogo.png";
 
 const RegisterButton = ({ icon, provider }) => {
   
   return (
     <button className="register-button" disabled>
-      <img src={icon} alt={provider} className="icon-img" /> Register with{" "}
+      <img src={icon} alt={provider} className="icon-img" /> Continuar con{" "}
       {provider}
     </button>
   );
@@ -36,12 +36,16 @@ const SignUp = () => {
         <div className="signup-container">
           <div className="centered-content">
             <img src={HeatyLogo} alt="Logo de Heaty" className="signup-image"/>
+          </div>
+          <div className="centered-content">
 
             <RegisterButton icon="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" provider="Google" />
             <RegisterButton icon="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" provider="Facebook" />
             <RegisterButton icon="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png" provider="Apple" />
 
-            <button onClick={handleRegisterClick}>Register</button>
+          <div className="centered-content">
+            <button onClick={handleRegisterClick}>Continuar con email</button>
+          </div>
           </div>
         </div>
       ) : (

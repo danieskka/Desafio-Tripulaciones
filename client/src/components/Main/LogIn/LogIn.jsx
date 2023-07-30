@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import RegisterSucc from "../../../assets/PICTURE 10.jpg"
 
 const LogIn = () => {
   
@@ -23,8 +24,8 @@ const LogIn = () => {
         <section className="login-container">
           <article className="login-success">
             <p>¡Has iniciado sesión con éxito!</p>
-            <img src="https://static.thenounproject.com/png/111461-200.png" alt="Mensaje de inicio de sesión" />
-            <Link to="/home" className="home-link">Ir a Home</Link>
+            <img src={RegisterSucc} alt="Mensaje de inicio de sesión" />
+            <Link to="/home" className="home-link">Ir al inicio</Link>
           </article>
         </section>
       ) : (

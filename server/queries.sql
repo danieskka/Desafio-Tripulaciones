@@ -10,7 +10,7 @@ CREATE TABLE users (
     zip_code VARCHAR(100),
     number_of_children INT,
     created_date DATE DEFAULT CURRENT_DATE,
-    login BOOLEAN DEFAULT false
+    login BOOLEAN DEFAULT true
 );
 
 -- Create quiz answers table
