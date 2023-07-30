@@ -49,6 +49,15 @@
     background: $main-gradient-color;
     color: white;
 }
+.quizResults{
+    padding: 0 1em;
+    text-align: justify;
+}
+.buttonsQuizResults{
+    display: flex;
+    flex-direction: column;
+
+}
 .progressBarWrapper{
 width: 92%;
 height: 0.7em;
@@ -102,6 +111,7 @@ width: 10%;
                                         display: flex;
                                         flex-direction: column;
                                     }
+
 @media (min-width: 1050px) {
     .optionsWrapper {
         display: flex;
@@ -113,6 +123,9 @@ width: 10%;
     .labelOptionQuiz{
         margin: 1.5em 1em;
         width: 45%;
+    }
+    .quizNextQuestion{
+        width: 12em;
     }
 }
 @media (min-width: 650px) {

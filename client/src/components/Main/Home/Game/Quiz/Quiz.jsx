@@ -175,9 +175,13 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
     <section className="sectionQuiz">
       <article>
       {showResults ? (
-          <div>
-            <h2>Tu puntuación es: {score}</h2>
+          <div className="quizResults">
+            <h2>Tu puntuación es:  {score} / 10</h2>
             <p>{getResultsMessage(score)}</p>
+            <div className="buttonsQuizResults">
+                <button className="quizNextQuestion">REPETIR JUEGO</button>
+                <button className="quizNextQuestion">SUIGIENTE LECCIÓN</button>
+            </div>
           </div>
         ) : (
           printQuestions()
