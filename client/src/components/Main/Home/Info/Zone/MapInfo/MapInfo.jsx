@@ -1,4 +1,4 @@
-
+import GetTodayInfo from "./GetTodayInfo";
 
 const MapInfo = () => {
   return (
@@ -13,6 +13,11 @@ const MapInfo = () => {
     <button className="b_filter">Mañana</button>
     <button className="b_filter">5 días</button>
   </article>
+  <p><GetTodayInfo/></p>
+  <article id="show_today">
+
+  </article>
+  
   
   </section>
 
