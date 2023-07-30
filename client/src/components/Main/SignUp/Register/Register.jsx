@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import RegisterSucc from "../../../../assets/PICTURE 10.jpg"
+import RegisterSucc from "../../../../../public/assets/PICTURE 10.jpg"
 
 const Register = ({ handleSignup }) => {
 
