@@ -1,0 +1,137 @@
+@import './../utils/variables.scss';
+
+.sectionQuiz{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.questionContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    label{
+        font-size: 0.9em;
+    }
+}
+.labelOptionQuiz{
+    border-radius: 10px;
+    background-color: rgb(252, 197, 116);
+    padding: 13px 10px;
+    line-height: 23px;
+    width: 90%;
+    margin: 0 auto 1em;
+}
+.labelOptionQuiz:hover{
+    background-color: rgb(253, 166, 90);
+    cursor: pointer;
+}
+.optionSelected{
+    background-color: rgb(85, 198, 246);
+}
+.quizHeaderWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 20px;
+        max-height: 20px;
+    }
+    img:hover{
+        cursor: pointer;
+    }
+}
+.quizNextQuestion{
+    width: 9em;
+    margin: 1em auto 0;
+    background: $main-gradient-color;
+    color: white;
+}
+.quizResults{
+    padding: 0 1em;
+    text-align: justify;
+}
+.buttonsQuizResults{
+    display: flex;
+    flex-direction: column;
+
+}
+.progressBarWrapper{
+width: 92%;
+height: 0.7em;
+border: solid rgb(115, 13, 13) 3px;
+display: flex;
+flex-direction: row;
+margin: auto;
+}
+.progressBarQuiz0{
+background:$main-gradient-color;
+width: 10%;
+}
+.progressBarQuiz1{
+    background:$main-gradient-color;
+    width: 20%;
+    }
+    .progressBarQuiz2{
+        background:$main-gradient-color;
+        width: 30%;
+        }
+        .progressBarQuiz3{
+            background:$main-gradient-color;    
+            width: 40%;
+            }
+            .progressBarQuiz4{
+                background:$main-gradient-color;    
+                width: 50%;
+                }
+                .progressBarQuiz5{
+                    background:$main-gradient-color;    
+                    width: 60%;
+                    }
+                    .progressBarQuiz6{
+                        background:$main-gradient-color;    
+                        width: 70%;
+                        }
+                        .progressBarQuiz7{
+                            background:$main-gradient-color;    
+                            width: 80%;
+                            }
+                            .progressBarQuiz8{
+                                background:$main-gradient-color;    
+                                width: 90%;
+                                }
+                                .progressBarQuiz9{
+                                    background:$main-gradient-color;    
+                                    width: 100%;
+                                    }
+
+                                    .optionsWrapper {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+@media (min-width: 1050px) {
+    .optionsWrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+
+    }
+    .labelOptionQuiz{
+        margin: 1.5em 1em;
+        width: 45%;
+    }
+    .quizNextQuestion{
+        width: 12em;
+    }
+}
+@media (min-width: 650px) {
+
+    .sectionQuiz{
+        width: 80%;
+        margin: auto;
+    }
+}

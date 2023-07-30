@@ -1,3 +1,5 @@
+@import './../utils/variables.scss';
+
 .progressMapGame{
     max-width: 300px;
 }
@@ -11,11 +13,8 @@
     a{
         width: 65%;
     }
-
 }
 .galleryButtons{
-
+    cursor: pointer;
     max-height: 40px;
-
-
 }
