@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {Link} from "react-router-dom";
 
-
 // importación del icono Hamburger
     import { Squash as Hamburger } from 'hamburger-react';
 
@@ -97,6 +96,7 @@ const NavBar = () => {
                     <Link to="/game"><MenuItem onClick={handleClose}>Juego</MenuItem></Link>
                     <Link to="/info"><MenuItem onClick={handleClose}>Formación</MenuItem></Link>
                     <Link to="/profile"><MenuItem onClick={handleClose}>Perfil</MenuItem></Link>
+                    <Link to="/signout"><MenuItem onClick={handleClose}>Cerrar Sesión</MenuItem></Link>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -113,6 +113,7 @@ const NavBar = () => {
             <Link className='link' to="/game">JUEGO</Link>
             <Link className='link' to="/info">FORMACIÓN</Link>
             <Link className='link' to="/profile">PERFIL</Link>
+            <Link className='link' to="/signout">CERRAR SESIÓN</Link>
         </ul>
     </nav>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HeatyLogo from "../../../assets/Group 2Icon.png";
+import Image1 from "../../../assets/PICTURE 1.png";
 import HeatyImg from "../../../assets/HeatyLogo.png";
 
 const Welcome = () => {
@@ -10,7 +10,7 @@ const Welcome = () => {
         <section className="welcome-container">
           <article className="image-container">
             <img
-              src={HeatyLogo}
+              src={Image1}
               alt="Logo de Heaty"
             />
           </article>
