@@ -1,6 +1,29 @@
 @import './../utils/variables.scss';
 
 .lectureText{
-    padding: 0 1em;
+    padding: 0 1.2em;
     text-align: justify;
+    li{
+        margin-bottom: 5px;
+    }
+    h3{
+        margin: 15px 0 5px
+    }
+    ul{
+        margin-top: 10px;
+    }
+}
+.liML{
+    margin-left: 2.3em;
+}
+.olMLecture{
+    padding-left: 1.3em;
+}
+.ulMLecture{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.minilecturePortada{
+    width: 12em;
 }

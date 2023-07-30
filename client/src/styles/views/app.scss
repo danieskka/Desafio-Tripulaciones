@@ -10,8 +10,21 @@ section{
 h1, h2, h3, h4{
     font-family: Kanit;
 }
-p, label{
+h1{
+    font-size: 1em;
+}
+h2{
+    font-size: .9em;
+}
+h3{
+    font-size: .6em;
+}
+h4{
+    font-size: 0.5em;
+}
+p, label, li{
     font-family: Montserrat;
+    font-size: .6em;
 }
 button{
     border-radius: 8px;
