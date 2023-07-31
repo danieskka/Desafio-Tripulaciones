@@ -30,12 +30,12 @@ const Resources = () => {
     <section>
       <h2 onClick={toggleArticles}>Olas de Calor</h2>
       <h2 onClick={toggleHealthImage}>Salud</h2>
+      <h3>Recursos</h3>
       {showHealthImage && (
         <div>
           <img className="articleNotFound" src="assets/isla_de_calor_urbano_mini_leccion.jpg" alt="isla de calor urbano" />
         </div>
       )}
-      <h3>Recursos</h3>
       {printArticles()}
     </section>
   );
