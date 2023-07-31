@@ -31,7 +31,7 @@ const Main = () => {
           <Route path="/gamequiz" element={<Quiz/>}/>
           <Route path="/zone" element={<Zone/>}/>
           <Route path="/resources" element={<Resources/>}/>  
-        <Route path="/chatbot" element={<ChatBot/>}/>
+          <Route path="/chatbot" element={<ChatBot/>}/>
         </Routes>
       </main>
     </>
