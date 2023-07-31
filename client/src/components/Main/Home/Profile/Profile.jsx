@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import Navegation from '../../Navegation/Navegation';
 
 const Profile = () => {
   const [stats, setStats] = useState([]);
@@ -28,20 +29,23 @@ const Profile = () => {
       Score: game,
     }));
   };
-
+  
   return (
-    <section className="profile-chart-container">
-      
-        <BarChart className="profile-bar-chart" width={800} height={400} data={getChartData()}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis ticks={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} />
-          <Tooltip />
-          <Legend /> 
-          <Bar dataKey="Score" fill={barColors} />
-        </BarChart>
-      
-    </section>
+    <>
+      <section className="profile-chart-container">
+        
+          <BarChart className="profile-bar-chart" width={800} height={400} data={getChartData()}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis ticks={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} />
+            <Tooltip />
+            <Legend /> 
+            <Bar dataKey="Score" fill={barColors} />
+          </BarChart>
+        
+      </section>
+      <Navegation />
+    </>
   );
 };
 
