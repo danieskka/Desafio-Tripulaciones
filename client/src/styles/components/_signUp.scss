@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
   }
   
   .centered-content {
@@ -11,11 +12,10 @@
     align-items: center;
     max-width: 400px;
     width: 90%;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 80px;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
     .signup-image {
       max-width: 100%;
