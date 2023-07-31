@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ResponsiveContainer, PieChart, Pie, Legend, Cell } from 'recharts';
 import axios from "axios";
+import Navegation from '../../Navegation/Navegation';
+
 
 const Profile = () => {
   const [stats, setStats] = useState([]);
@@ -26,7 +28,7 @@ const Profile = () => {
       value: game,
     }));
   };
-
+  
   return (
     <>
     <h1>Hola, Jugador</h1>
@@ -43,6 +45,7 @@ const Profile = () => {
         </PieChart>
       </ResponsiveContainer>
     </div>
+      <Navegation />
     </>
   );
 };
