@@ -7,7 +7,7 @@ const MiniLecture = () => {
       <section className="homeWrapper">
         <h1>OLAS DE CALOR</h1>
         <h2>Sobreviviendo al Calor Extremo</h2>
-        <img src="assets/isla_de_calor_urbano_mini_leccion.jpg" alt="Calor" className="minilecturePortada"/>
+        <img src="assets/isla_de_calor_urbano_mini_leccion.jpg" alt="Calor" className="imgPortada"/>
         <article className="lectureText">
           <p>Las olas de calor son fenómenos climáticos extremos con temperaturas anormalmente altas y duraderas. Pueden tener efectos devastadores en la salud, agricultura, infraestructura y el medio ambiente. En esta lección, exploraremos sus causas, impactos y medidas de prevención.    </p>
           <h3>¿Qué es una ola de calor?</h3>
@@ -18,6 +18,7 @@ const MiniLecture = () => {
               <li className="liML">Bloqueo atmosférico: La corriente en chorro puede estancarse, causando una ola de calor prolongada. </li>
               <li className="liML">Cambio climático: La emisión de gases de efecto invernadero intensifica y prolonga las olas de calor.</li>
           </ul>
+          <img src="assets/PICTURE 4.png" alt="sequía" />
           <h3>Impactos de las olas de calor </h3>
           <ul className="ulMLecture">
               <li className="liML">Salud humana: Pueden causar golpes de calor, agotamiento y deshidratación, afectando especialmente a niños y ancianos.</li>
