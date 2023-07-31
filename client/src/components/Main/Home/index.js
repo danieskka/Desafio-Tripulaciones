@@ -1,20 +1,45 @@
 export const news = [
 
     {
-        headline: 'Portugal y Croacia se unen a la lucha contra las llamas en Europa',
-        img: 'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2022/07/18/16581599538829.jpg',
-        url: 'https://www.20minutos.es/noticia/5159691/0/incendios-portugal-espana-europa-en-directo-ultimas-noticias/'
+        headline: "Impacto de las olas de calor en nuestra salud ¿Cómo prevenirlo?",
+        text: 'Las olas de calor están aquí para quedarse pero, ¿realmente sabemos cómo afecta a nuestra salud? Los niños, ancianos y personas con enfermedades crónicas son los grupos más vulnerables ante este hecho por lo que debemos saber cómo prevenir un golpe de calor. Sigue leyendo si quieres saber cómo hacerlo.',
+        img: ''
+
     },
     {
         headline: 'Mapa de calor',
-        img: 'assets/Screenshot_240.png',
-        url: '/zone'
+        text: 'assets/Screenshot_240.png',
+        img: '/zone'
     },
     {
-        headline: 'Boletín de información de Olas de Calor',
-        img: 'https://lalunadelhenares.com/wp-content/uploads/2020/07/continua-ola-calor-temperaturas-no-tregua-miercoles-corredor-noticias-valle-henares-1024x682.jpg',
-        url: 'https://www.comunidad.madrid/servicios/salud/boletin-informacion-olas-calor'
+        headline: '¿Cuál es el papel del cambio climático en el aumento de las olas de calor?',
+        text: 'Seguro que has escuchado que el cambio climático no existe, pero ¿de verdad es cierto? Y si fuera cierto, ¿qué tiene que ver con las olas de calor? Te aclaramos todas las dudas en este artículo.',
+        img: ''
+    },
+    {
+        headline: "Cómo enfrentar las olas de calor.",
+        text: 'Es verano, las olas de calor son comunes y no todos tenemos piscina o aire acondicionado, entonces ¿qué podemos hacer para enfrentar las olas de calor? ¿Puede nuestra ciudad ayudar a aplacar las olas de calor? Te lo contamos todo en este artículo.',
+        img: ''
+    },
+    {
+        headline: "La biodiversidad y los ecosistemas afectados por las olas de calor",
+        text:'¿No te da la sensación de que antes había más bichos? ¿Antes veías más gorriones? ¿Ha pasado algo o es nuestra memoria que nos está engañando? Desgraciadamente, nuestra biodiversidad y ecosistemas están siendo impactados por las olas de calor. Si quieres saber qué nos espera ante este hecho, sigue leyendo.',
+        img: ''
+    },
+    {
+        headline: "El efecto isla de calor urbano ¿qué es y cómo solucionarlo?",
+        text:'¿Has oído hablar del “efecto isla de calor urbano”? ¿Nos afecta en algo? ¿Se puede solucionar? Te  aclaramos todas las dudas en este artículo.',
+        img: ''
     }
 ]
 
 export { default } from "./Home";
+
+
+
+
+
+
+
+
+

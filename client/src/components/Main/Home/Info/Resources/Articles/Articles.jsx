@@ -1,11 +1,14 @@
-import React from "react";
+import {Link} from "react-router-dom";
 
 const Articles = ({ title, body }) => {
-  return (
-  <article className="articleCard">
-    <h3> {title} </h3>
-    <p> {body} </p>
-  </article>
+  return ( //
+      <div className="articleCard">
+        <h3> {title} </h3>
+        <p > {body} </p>
+        <Link to="/article" >
+      <img src="" alt="" />  
+      </Link>
+      </div>
 
   );
 };
