@@ -13,7 +13,6 @@ const Profile = () => {
         const response = await axios.get("/quiz");
         const data = response.data.previousGames;
         setStats(data);
-        console.log(stats);
       } catch (error) {
         console.log("Error:", error);
       }
