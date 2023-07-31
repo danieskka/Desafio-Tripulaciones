@@ -5,6 +5,7 @@
 
 const Info = () => {
   return (
+    <>
     <section className="info_general_container">
       
     <h2>Formación</h2>
