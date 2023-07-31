@@ -29,16 +29,24 @@ const Resources = () => {
 
   return (
     <>
-      <section>
-        <h2 onClick={toggleArticles}>Olas de Calor</h2>
-        <h2 onClick={toggleHealthImage}>Salud</h2>
-        <h3>Recursos</h3>
+      <section className="sectionResources">
+        <div className="resourcesSliderMenu">
+          <h2 className="h2Resources" onClick={toggleArticles}>Olas de Calor</h2>
+          <h2 className="h2Resources" onClick={toggleHealthImage}>Primeros Auxilios</h2>
+          <h2 className="h2Resources" onClick={toggleHealthImage}>Prevención Individual</h2>
+          <h2 className="h2Resources" onClick={toggleHealthImage}>Información Global</h2>
+          <h2 className="h2Resources" onClick={toggleHealthImage}>Últimas Noticias</h2>
+          <h2 className="h2Resources" onClick={toggleHealthImage}>Videos/Webinar</h2>
+        </div>
+        <h1>Recursos</h1>
         {showHealthImage && (
           <div>
             <img className="articleNotFound" src="assets/isla_de_calor_urbano_mini_leccion.jpg" alt="isla de calor urbano" />
           </div>
         )}
+      <article>
         {printArticles()}
+      </article>
       </section>
       <Navegation />
     </>

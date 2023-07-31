@@ -34,7 +34,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);  //Indice de preguntas para paginación.
   const handleNextQuestion = () => {
     setCurrentQuestionIndex(prevIndex => prevIndex + 1);
-    setCountDown(90)
+    setCountDown(60)
     // console.log(answers);
   }
 
@@ -91,7 +91,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
 
   //Timer COUNTDOWN  ---------------------------------
     const timer = useRef;
-    const [countDown, setCountDown] = useState (90);  //Cuenta atrás.
+    const [countDown, setCountDown] = useState (60);  //Cuenta atrás.
     useEffect(() => {
       timer.current = setInterval(() => {
 
@@ -109,7 +109,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
         } else {
           onSubmit(); 
         }
-        setCountDown(90);
+        setCountDown(60);
       }
     }, [countDown, currentQuestionIndex]);
    // -----------------------------------------------------

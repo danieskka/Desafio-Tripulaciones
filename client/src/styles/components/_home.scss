@@ -3,6 +3,12 @@
 .progressMapGame{
     max-width: 300px;
 }
+.homeWrapper{
+    background: url(assets/path_group.png);
+    // background-blend-mode:   hard-light;
+    background-size:  cover;
+    padding-top: 1em;
+}
 .homeWrapper, .progressHomeContainer, .galleryHomeContainer{
     display: flex;
     flex-direction: column;
@@ -10,11 +16,33 @@
 }
 .galleryHomeContainer{
     width: 90%;
+    margin: auto;
+    overflow-x: scroll;
+    align-items: flex-start;
     a{
         width: 65%;
     }
 }
+.galleryHomeContainer::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+    height: 11px;
+  }
+  
+  .galleryHomeContainer::-webkit-scrollbar-track {
+    background-color:   $main-red-color;        /* color of the tracking area */
+    border-radius: 8px;
+  }
+  
+  .galleryHomeContainer::-webkit-scrollbar-thumb {
+    background-color: $main-yellow-color;    /* color of the scroll thumb */
+    border-radius: 8px;       /* roundness of the scroll thumb */
+    // border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
 .galleryButtons{
     cursor: pointer;
     max-height: 40px;
 }
+.progressHomeContainer{
+    margin-bottom: 1.3em;
+}
+

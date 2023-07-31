@@ -11,6 +11,7 @@ import Resources from './Home/Info/Resources/Resources';
 import MiniLecture from './Home/Game/MiniLecture/MiniLecture';
 import Quiz from './Home/Game/Quiz/Quiz';
 import Welcome from './Welcome/Welcome';
+import Article from './Home/Info/Resources/Article/Article';
 
 
 const Main = () => {
@@ -30,6 +31,7 @@ const Main = () => {
           <Route path="/gamequiz" element={<Quiz/>}/>
           <Route path="/zone" element={<Zone/>}/>
           <Route path="/resources" element={<Resources/>}/>  
+          <Route path="/article" element={<Article/>}/>
         </Routes>
       </main>
     </>
