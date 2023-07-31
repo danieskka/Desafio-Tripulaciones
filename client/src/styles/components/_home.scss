@@ -10,11 +10,30 @@
 }
 .galleryHomeContainer{
     width: 90%;
+    overflow-x: scroll;
+    margin: auto;
+    align-items: flex-start;
     a{
         width: 65%;
     }
 }
+.galleryHomeContainer::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+ 
+  }
+  
+  .galleryHomeContainer::-webkit-scrollbar-track {
+    background-color:   $main-red-color;        /* color of the tracking area */
+    border-radius: 8px;
+  }
+  
+  .galleryHomeContainer::-webkit-scrollbar-thumb {
+    background-color: $main-yellow-color;    /* color of the scroll thumb */
+    border-radius: 8px;       /* roundness of the scroll thumb */
+    border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
 .galleryButtons{
     cursor: pointer;
     max-height: 40px;
 }
+
