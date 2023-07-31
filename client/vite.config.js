@@ -9,7 +9,7 @@ export default defineConfig({
       {"/login": "http://localhost:3000",
        "/signup": "http://localhost:3000",
        "/logout": "http://localhost:3000",
-       "/quiz": "http://localhost:3000"
+       "/quiz": "http://localhost:3000",
       }
   },
 })

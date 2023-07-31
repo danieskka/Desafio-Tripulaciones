@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import RegisterSucc from "../../../assets/PICTURE 10.jpg"
-import HeatyLogo from "../../../assets/IconIcon.png"
+import RegisterSucc from "../../../../public/assets/PICTURE 10.jpg"
+import HeatyLogo from "../../../../public/assets/HeatyLogo.png"
 
 const LogIn = () => {
   

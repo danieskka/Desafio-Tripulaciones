@@ -1,4 +1,4 @@
-@import './components/header';
+// @import './components/header';
 @import './components/home';
 @import './components/gallery';
 @import './components/zone';
@@ -10,5 +10,7 @@
 @import './components/quiz';
 @import './components/minilecture';
 @import './components/welcome';
-@import './components/logOut';
+@import './components/navigation';
+@import './components/article';
+
 @import './views/app';

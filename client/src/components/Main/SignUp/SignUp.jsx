@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import Register from "./Register";
-import HeatyLogo from "../../../assets/HeatyLogo.png";
+import HeatyTitle from "../../../../public/assets/HeatyTitle.png";
 
 const RegisterButton = ({ icon, provider }) => {
   
@@ -35,7 +35,7 @@ const SignUp = () => {
       {!showRegister ? (
         <div className="signup-container">
           <div className="centered-content">
-            <img src={HeatyLogo} alt="Logo de Heaty" className="signup-image"/>
+            <img src={HeatyTitle} alt="Logo de Heaty" className="signup-image"/>
           </div>
           <div className="centered-content">
 

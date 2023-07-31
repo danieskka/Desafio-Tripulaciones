@@ -1,7 +1,11 @@
-import React from "react";
 
 const Progress = () => {
-  return <div>Progress</div>;
+  return (
+  <>
+      <h1>Vista de progreso</h1>
+  </>
+  
+  );
 };
 
 export default Progress;
