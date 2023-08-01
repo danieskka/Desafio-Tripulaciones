@@ -21,7 +21,7 @@ const Resources = () => {
   const printArticles = () => {
     if (showArticles) {
       return articles.map(item => (
-        <Articles title={item.title} body={item.body} key={uuidv4()} />
+        <Articles title={item.title} body={item.body} img={item.img} key={uuidv4()} />
       ));
     }
     return null;
