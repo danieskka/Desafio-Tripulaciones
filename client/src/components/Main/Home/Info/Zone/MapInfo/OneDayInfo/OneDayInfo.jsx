@@ -12,13 +12,13 @@ function OneDayInfo({weatherData}) {
       {weatherData && (
        
         <div id="show_what_you_got">
-          <p>Ciudad: Madrid</p>
-          <p>Fecha y Hora: {weatherData.dt_txt}</p>
-          <p>Temperatura: {farenheitToCelsius(weatherData.main.temp)} °C</p>
-          <p>Sensación térmica: { farenheitToCelsius(weatherData.main.feels_like) }°C</p>
-          <p>Máxima prevista: {farenheitToCelsius(weatherData.main.temp_max)}°C</p>
-          <p>Mínima prevista: {farenheitToCelsius(weatherData.main.temp_min)}°C</p>
-          <p>Humedad: {weatherData.main.humidity}</p>
+          <p><b>Ciudad: </b> Madrid</p>
+          <p><b>Fecha y hora:</b> {weatherData.dt_txt}</p>
+          <p><b>Temperatura:</b> {farenheitToCelsius(weatherData.main.temp)} °C</p>
+          <p><b>Sensación térmica:</b> { farenheitToCelsius(weatherData.main.feels_like) }°C</p>
+          <p><b>Máxima prevista:</b> {farenheitToCelsius(weatherData.main.temp_max)}°C</p>
+          <p><b>Mínima prevista:</b> {farenheitToCelsius(weatherData.main.temp_min)}°C</p>
+          <p><b>Humedad(%):</b> {weatherData.main.humidity}</p>
           {/* {getObjetInfo.weather && (
             <img
               src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}

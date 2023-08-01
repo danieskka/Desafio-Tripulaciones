@@ -1,6 +1,5 @@
   import {Link} from "react-router-dom";
   import Navegation from '../../Navegation/Navegation';
-//import HeatyLogo from "../../../assets/IconIcon.png"
 
 
 const Info = () => {
