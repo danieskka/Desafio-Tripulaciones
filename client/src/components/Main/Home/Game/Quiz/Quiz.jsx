@@ -145,7 +145,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
             <div className="optionsWrapper">
                 {question.options.map((option, optionIdx) => (
 
-                        <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
+                        <label key={optionIdx}   className="labelOptionQuiz"
                         onClick={() => handleOptionSelect(questionIndex, option.radioValue)} >
                           <input  type="radio" name={question.name}
                             value={option.radioValue}

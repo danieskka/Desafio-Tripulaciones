@@ -31,12 +31,12 @@ const Resources = () => {
     <>
       <section className="sectionResources">
         <div className="resourcesSliderMenu">
-          <h2 className="h2Resources" onClick={toggleArticles}>Olas de Calor</h2>
-          <h2 className="h2Resources" onClick={toggleHealthImage}>Primeros Auxilios</h2>
-          <h2 className="h2Resources" onClick={toggleHealthImage}>Prevención Individual</h2>
-          <h2 className="h2Resources" onClick={toggleHealthImage}>Información Global</h2>
-          <h2 className="h2Resources" onClick={toggleHealthImage}>Últimas Noticias</h2>
-          <h2 className="h2Resources" onClick={toggleHealthImage}>Videos/Webinar</h2>
+          <h3 className="h3Resources" onClick={toggleArticles}>Olas de Calor</h3>
+          <h3 className="h3Resources" onClick={toggleHealthImage}>Primeros Auxilios</h3>
+          <h3 className="h3Resources" onClick={toggleHealthImage}>Prevención Individual</h3>
+          <h3 className="h3Resources" onClick={toggleHealthImage}>Información Global</h3>
+          <h3 className="h3Resources" onClick={toggleHealthImage}>Últimas Noticias</h3>
+          <h3 className="h3Resources" onClick={toggleHealthImage}>Videos/Webinar</h3>
         </div>
         <h1>Recursos</h1>
         {showHealthImage && (
