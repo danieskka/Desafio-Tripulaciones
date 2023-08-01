@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { data } from "./index";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import Swal from "sweetalert2";
+
 
 
 const Quiz = () => {
@@ -13,7 +15,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
     Swal.fire({
       title: '¿Seguro que quieres abandonar?',
       text: "Tu progreso en este juego no se guardará",
-      icon: 'question',
+      imageUrl: 'assets/PICTURE 7.png',
       showDenyButton: true,
       denyButtonText: 'Cancelar',
       confirmButtonColor: '#3085d6',
@@ -28,7 +30,14 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
   alertQuitGame()
 }
   
-
+  const resetQuiz = () => {
+    setAnswers(Array(data.length).fill(null));
+    setCurrentQuestionIndex(0);
+    setSelectedOption("");
+    setScore(0);
+    setShowResults(false);
+    setCountDown(60);
+  };
 
   //Paginación de preguntas.
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);  //Indice de preguntas para paginación.
@@ -64,6 +73,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
     }
     setScore(counter)
     setShowResults(true); // Muestra mensaje de resultados según puntuación.
+
 
     const userResults =   {
       q1: answers[0],
@@ -121,31 +131,34 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
     
         return (
           <div className="questionContainer">
-            <div className="progressBarWrapper">
-              <div className={`progressBarQuiz${questionIndex}`}></div>
+            <div className="headQuiz">
+                <div className="progressBarWrapper">
+                  <div className={`progressBarQuiz${questionIndex}`}></div>
+                </div>
+                <img onClick={QuitGame} src="assets/close.png" alt="abandonar juego" />
             </div>
             <div className="quizHeaderWrapper">
-              <h2> Tiempo Restante: {countDown} </h2>
-              <img onClick={QuitGame} src="assets/close.png" alt="abandonar juego" />
+                <h1>Pregunta {questionIndex + 1} </h1>
+                <h1> {countDown} </h1>
             </div>
-            <h3>Pregunta {questionIndex + 1}: {question.question}</h3>
+            <h3>{question.question}</h3>
             <div className="optionsWrapper">
-            {question.options.map((option, optionIdx) => (
+                {question.options.map((option, optionIdx) => (
 
-                    <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
-                    onClick={() => handleOptionSelect(questionIndex, option.radioValue)} >
-                      <input  type="radio" name={question.name}
-                        value={option.radioValue}
-                        checked={option.radioValue === answers[questionIndex]}
-                        onChange={() => {}} />
-                      {option.choice}
-                    </label>
-            ))}
+                        <label key={optionIdx}   className={selectedOption === option.radioValue ? "labelOptionQuiz optionSelected" : "labelOptionQuiz"}
+                        onClick={() => handleOptionSelect(questionIndex, option.radioValue)} >
+                          <input  type="radio" name={question.name}
+                            value={option.radioValue}
+                            checked={option.radioValue === answers[questionIndex]}
+                            onChange={() => {}} />
+                          {option.choice}
+                        </label>
+                ))}
             </div>
             {currentQuestionIndex < data.length - 1 ? (
-              <button onClick={handleNextQuestion} className="quizNextQuestion">SIGUIENTE</button>
+              <button onClick={handleNextQuestion} className="QuizButtons">SIGUIENTE</button>
             ) : (
-              <button onClick={onSubmit} className="quizNextQuestion">RESULTADOS</button>
+              <button onClick={onSubmit} className="QuizButtons">RESULTADOS</button>
             )}
           </div>
         );
@@ -155,11 +168,11 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
   const [showResults, setShowResults] = useState(false);  // Para mostar mensaje de Resultados.
   const getResultsMessage = (score) => {
     if (score === 0) {
-      return `¡Ups! No has obtenido ningún acierto. No te preocupes, siempre hay oportunidad para aprender más sobre las olas de calor. Te animo a investigar un poco más y así estar preparado/a para enfrentar este fenómeno natural. ¡Ánimo!`;
+      return `¡Ups! No has obtenido ningún acierto. Te animo a investigar un poco más y así estar preparado/a para enfrentar este fenómeno natural. ¡Ánimo!`;
     } else if (score >= 1 && score <= 4) {
-      return `¡Bien hecho! Has obtenido ${score} aciertos. Aunque todavía hay aspectos por conocer, estás en el camino correcto. Las olas de calor pueden ser peligrosas, pero con más información, podrás protegerte mejor en el futuro. ¡Sigue aprendiendo y cuidándote!`;
+      return `¡Bien hecho! Has obtenido ${score} aciertos. Aunque todavía hay aspectos por conocer, estás en el camino correcto. ¡Sigue aprendiendo y cuidándote!`;
     } else if (score >= 5 && score <= 7) {
-      return `¡Muy bien! Has obtenido ${score} aciertos. ¡Tienes conocimientos sólidos sobre las olas de calor! Estás consciente de los riesgos y medidas preventivas necesarias para mantener tu bienestar durante estas condiciones extremas. ¡Sigue así!`;
+      return `¡Muy bien! Has obtenido ${score} aciertos. Tienes conocimientos sólidos sobre las olas de calor y sobre medidas preventivas necesarias para mantener tu bienestar durante estas condiciones extremas ¡Sigue así!`;
     } else if (score >= 8 && score <= 9) {
       return `¡Felicidades! Has obtenido ${score} aciertos. ¡Casi un experto/a en olas de calor! Tu conocimiento sobre este tema es impresionante, y estás bien preparado/a para enfrentar situaciones de calor extremo. ¡Sigue así y mantén tu seguridad y la de otros!`;
     } else if (score === 10) {
@@ -176,11 +189,15 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
       <article>
       {showResults ? (
           <div className="quizResults">
-            <h2>Tu puntuación es:  {score} / 10</h2>
+            <img src="assets/PICTURE 9.png" alt="Bien hecho" />
             <p>{getResultsMessage(score)}</p>
+            <h2>Has acertado {score} de 10 preguntas</h2>
             <div className="buttonsQuizResults">
-                <button className="quizNextQuestion">REPETIR JUEGO</button>
-                <button className="quizNextQuestion">SUIGIENTE LECCIÓN</button>
+                <Link to='/game'><button className="seguirJugandoButton">Seguir jugando</button></Link>
+                <div className="resultsButtonWrapper">
+                  <Link to="/gamequiz"><button className="resultButton" onClick={resetQuiz}>Repetir test</button></Link>
+                  <Link to='/profile'><button className="resultButton">Ver perfil</button></Link>  
+                </div>
             </div>
           </div>
         ) : (
