@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ResponsiveContainer, PieChart, Pie, Legend, Cell } from 'recharts';
+import { Link } from 'react-router-dom';
 import axios from "axios";
 import Navegation from '../../Navegation/Navegation';
 import Tools from '../../../../../public/assets/Tools.svg';
@@ -31,9 +32,12 @@ const Profile = () => {
   
   return (
     <>
+    <section className="background-img">
+    <Link to="/User">
     <img src={Tools} className="tools-img"></img>
+    </Link>
     <h1>Hola, Jugador</h1>
-    <h2>Estadísticas:</h2>
+    <h2 className="profile-titles">Estadísticas:</h2>
     <div style={{ width: '100%', height: 300 }}>
       <ResponsiveContainer>
         <PieChart>
@@ -46,6 +50,16 @@ const Profile = () => {
         </PieChart>
       </ResponsiveContainer>
     </div>
+    <h2 className="profile-titles"> Mis Partidas:</h2>
+    <article>
+        {stats.map((game, index) => (
+          <article key={index} className="games-box">
+            <p>Partida {index + 1}</p>
+            <p>Puntuación: {game}</p>
+          </article>
+        ))}
+      </article>
+      </section>
       <Navegation />
     </>
   );
