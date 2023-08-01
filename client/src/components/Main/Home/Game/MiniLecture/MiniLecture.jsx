@@ -18,7 +18,7 @@ const MiniLecture = () => {
               <li className="liML">Bloqueo atmosférico: La corriente en chorro puede estancarse, causando una ola de calor prolongada. </li>
               <li className="liML">Cambio climático: La emisión de gases de efecto invernadero intensifica y prolonga las olas de calor.</li>
           </ul>
-          <img src="assets/PICTURE 4.png" alt="sequía" />
+          <img src="assets/PICTURE 4.png" alt="sequía"/>
           <h3>Impactos de las olas de calor </h3>
           <ul className="ulMLecture">
               <li className="liML">Salud humana: Pueden causar golpes de calor, agotamiento y deshidratación, afectando especialmente a niños y ancianos.</li>

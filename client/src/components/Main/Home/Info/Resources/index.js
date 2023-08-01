@@ -16,7 +16,7 @@ export const articles = [
 },
 {
     title: " La biodiversidad y los ecosistemas afectados por las olas de calor ¿Qué nos espera?",
-    body: "¿No te da la sensación de que antes había más bichos? ¿Antes veías más gorriones? ¿Ha pasado algo o es nuestra memoria que nos está engañando? Desgraciadamente, nuestra biodiversidad y ecosistemas están siendo impactados por las olas de calor. Si quieres saber qué nos espera ante este hecho, sigue leyendo",
+    body: "¿No te da la sensación de que antes había más bichos? ¿Antes veías más gorriones?  Desgraciadamente, nuestra biodiversidad y ecosistemas están siendo impactados por las olas de calor. Si quieres saber qué nos espera ante este hecho, sigue leyendo",
     img: 'assets/PICTURE 2.png'
 },
 {
