@@ -1,4 +1,6 @@
 .sectionResources{
+    background: url(assets/Clip_path_group.png);
+    background-size:  cover;
 margin: auto;
 width: 95%;
 }
@@ -18,9 +20,10 @@ width: 95%;
     //     width: 34em;
     // }
 }
-.h2Resources{
-    margin-right: 2em;
+.h3Resources{
+    margin-right: 1.5em;
     min-width: 5em;
+    font-size: 1em;
 }
 .resourcesSliderMenu::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */

@@ -1,5 +1,6 @@
 @import './../utils/variables.scss';
-body {
+
+body{
     margin: 0;
     padding: 0;
 }
@@ -10,17 +11,17 @@ h1, h2, h3, h4{
     font-family: Kanit;
 }
 h1{
-    font-size: 1.1em;
+    font-size: 2em;
     text-align: center;
 }
 h2{
-    font-size: 1em;
+    font-size: 1.6em;
 }
 h3{
-    font-size: .9em;
+    font-size: 1.1em;
 }
 h4{
-    font-size: .8em;
+    font-size: 1em;
 }
 p, label, li{
     font-family: Montserrat;
@@ -34,6 +35,7 @@ button{
     border: none;
     background: $main-gradient-color;
     width: 11em;
+    color:black
 }
 button:hover{
     cursor: pointer;

@@ -1,9 +1,10 @@
 @import './../utils/variables.scss';
-/*
-.game_general_container{
 
+.game_general_container{
+width: 100%;
+height: 100%;
 }
-*/
+
 
 .game_title_quiz {
     display: flex;
@@ -22,6 +23,13 @@
     img{
         z-index: -1;
     }
+}
+.buttonGame{
+    width: 90px;
+    position: absolute;
+    margin-top: 37.7em;
+    margin-left: -5.2em;
+    cursor: pointer;
 }
 
 

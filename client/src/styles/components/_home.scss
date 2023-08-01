@@ -2,11 +2,12 @@
 
 .progressMapGame{
     max-width: 300px;
+    margin-bottom: 1em;
 }
 .homeWrapper{
     background: url(assets/path_group.png);
-    // background-blend-mode:   hard-light;
     background-size:  cover;
+    // background-blend-mode:   hard-light;
     padding-top: 1em;
 }
 .homeWrapper, .progressHomeContainer, .galleryHomeContainer, .game_general_container {

@@ -1,52 +1,29 @@
 import {Link} from "react-router-dom";
-import { useState, useEffect } from "react";
-
-
 
 const Navegation = () => {
-
-  const [onClick, setOnClick] = useState(false);
-
-
-  const handleBackgroundIcon = () => {
-    setOnClick(true);
-    setTimeout(() => {
-      setOnClick(false);
-    }, 1000);
-  };
-
-  useEffect(() => {
-    if (onClick) {
-      const timer = setTimeout(() => {
-        setOnClick(false);
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [onClick]);
 
   return (
     <div className="navigationContainer">
       <Link to="/home">        
-        <div onClick={handleBackgroundIcon} className="iconNavigation">
+        <div className="iconNavigation">
           <img src="assets/Home.svg" alt="home" />
           <span>Home</span>
         </div>
       </Link>
       <Link to="/game">        
-        <div onClick={handleBackgroundIcon} className="iconNavigation">
+        <div className="iconNavigation">
         <img src="assets/juego.svg" alt="juego" />
           <span>Juego</span>
         </div>
       </Link>
       <Link to="/info">        
-        <div onClick={handleBackgroundIcon} className="iconNavigation">
+        <div className="iconNavigation">
         <img className="formacion" src="assets/Formación.svg" alt="formación" />
           <span>Formación</span>
         </div>
       </Link>
       <Link to="/profile">  
-        <div onClick={handleBackgroundIcon} className="iconNavigation">
+        <div className="iconNavigation">
           <img src="assets/perfil.svg" alt="perfil" />
           <span>Perfil</span>
         </div>

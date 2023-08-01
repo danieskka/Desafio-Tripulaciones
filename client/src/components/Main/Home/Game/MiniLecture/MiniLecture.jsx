@@ -35,10 +35,11 @@ const MiniLecture = () => {
               <li>Reducir uso de energía: Disminuir el consumo de energía para evitar apagones.</li>
           </ol>
           <p>Las olas de calor son eventos climáticos extremos que debemos tomar en serio. Al comprender sus causas e impactos, y adoptar medidas preventivas, podemos enfrentar mejor este calor extremo. La concienciación sobre el cambio climático y prácticas sostenibles son clave para mitigar las olas de calor en el futuro. Proteger nuestra salud y entorno depende de nuestra responsabilidad colectiva en la lucha contra el calor extremo.</p>
+          <h3>¿Listo para poner a prueba lo aprendido?</h3>
         </article>
 
         <Link to="/gamequiz">
-        <button className="quizNextQuestion">COMENZAR QUIZ</button>
+        <button className="quizNextQuestion">EMPEZAR TEST</button>
         </Link>
       </section>
       <Navegation />
