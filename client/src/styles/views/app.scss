@@ -5,13 +5,14 @@ body {
     padding: 0;
 }
 section{
-    padding-bottom: 2em;
+    padding-bottom: 1.2em;
 }
 h1, h2, h3, h4{
     font-family: Kanit;
 }
 h1{
     font-size: 1em;
+    text-align: center;
 }
 h2{
     font-size: .9em;
@@ -46,3 +47,4 @@ a:visited{
     color:black
 
 }
+a:link {   text-decoration: none; }  a:visited {   text-decoration: none; }

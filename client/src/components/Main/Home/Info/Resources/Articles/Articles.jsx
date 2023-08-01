@@ -1,13 +1,15 @@
 import {Link} from "react-router-dom";
 
-const Articles = ({ title, body }) => {
+const Articles = ({ title, body, img }) => {
   return ( //
       <div className="articleCard">
-        <h3> {title} </h3>
-        <p > {body} </p>
         <Link to="/article" >
-      <img src="" alt="" />  
+      <img src={img} alt="article imagen"/>  
       </Link>
+        <div className="bodyArticleCard">
+            <h3> {title} </h3>
+            <p > {body} </p>          
+        </div>
       </div>
 
   );
