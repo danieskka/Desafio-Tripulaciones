@@ -10,9 +10,9 @@ const Info = () => {
       
     <h2>Formación</h2>
 
-    <Link to="/teacher"><article className="info_subsections"></article></Link>
+    <Link to="/chatbot"><article className="info_subsections"></article></Link>
     <article>
-      <Link to="/teacher"><p>Profesora virtual</p></Link>
+      <Link to="/chatbot"><p>Profesora virtual</p></Link>
     </article>
 
     

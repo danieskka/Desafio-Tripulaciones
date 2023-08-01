@@ -1,14 +1,18 @@
 import React from "react";
 
 const ChatBot = () => {
-  const endpointUrl = "https://mi-servicio-chatgpt-u4ktx3b6jq-ew.a.run.app";
+
+  const endpointUrl = import.meta.env.VITE_URL_CHAT;
 
   return (
+    <>
+    <h1>Profesora Virtual</h1>
     <iframe
       src={endpointUrl}
       title="ChatBot"
       style={{ width: "100%", height: "100vh", border: "none" }}
     />
+    </>
   );
 };
 
