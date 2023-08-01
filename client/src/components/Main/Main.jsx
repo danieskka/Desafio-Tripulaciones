@@ -13,6 +13,7 @@ import Quiz from './Home/Game/Quiz/Quiz';
 import Welcome from './Welcome/Welcome';
 import Article from './Home/Info/Resources/Article/Article';
 import ChatBot from './Home/Info/ChatBot/ChatBot';
+import User from './Home/Profile/User/User';
 
 
 const Main = () => {
@@ -33,7 +34,8 @@ const Main = () => {
           <Route path="/zone" element={<Zone/>}/>
           <Route path="/resources" element={<Resources/>}/>  
           <Route path="/chatbot" element={<ChatBot/>}/>  
-          <Route path="/article" element={<Article/>}/>  
+          <Route path="/article" element={<Article/>}/>
+          <Route path="/user" element={<User/>}/>
         </Routes>
       </main>
     </>

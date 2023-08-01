@@ -12,4 +12,8 @@
       box-shadow: 0 2px 4px rgba(235, 171, 171, 0.1); // Sombra del tooltip
     }
 }
-  
+
+.tools-img {
+  display: "flex"; 
+  justify-content: "flex-end";
+}

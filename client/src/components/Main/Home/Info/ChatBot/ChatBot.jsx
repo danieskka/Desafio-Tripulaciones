@@ -1,4 +1,7 @@
 import React from "react";
+import Maria from '../../../../../../public/assets/MAR IA.svg';
+import Chat from '../../../../../../public/assets/Frame 24.svg';
+import Arrow from '../../../../../../public/assets/Size=32.svg';
 
 const ChatBot = () => {
 
@@ -7,6 +10,11 @@ const ChatBot = () => {
   return (
     <>
     <h1>Profesora Virtual</h1>
+    <article className="chat-container">
+      <img src={Maria} className="chat-img"></img>
+      <img src={Chat} className="chat-img"></img>
+    </article>
+    {/* <img src={Arrow} className="arrow-chat-img"></img> */}
     <iframe
       src={endpointUrl}
       title="ChatBot"

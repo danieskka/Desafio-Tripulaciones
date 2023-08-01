@@ -22,15 +22,6 @@ const Welcome = () => {
 
   return (
     <>
-      {/* <h1 className="welcome-title"><img src={HeatyImg} alt="Heaty Img" className="title-img"/></h1> */}
-        {/* <section className="login-container"> */}
-          {/* <article className="image-container">
-            <img
-              src={Image1}
-              alt="Logo de Heaty"
-            />
-          </article> */}
-          {/* <article className="login-success"> */}
           {isLogin ? ( 
         <section className="login-container">
           <article className="login-success">
@@ -46,22 +37,29 @@ const Welcome = () => {
           
           <form onSubmit={handleSubmit(handleLogin)}  className="login-form">
             <article className="login-success">
-              <label>Correo electrónico:</label>
-              <input type="email" {...register("email", { required: true })} />
+              
+              <input type="email" {...register("email", { required: true })} placeholder="Correo electrónico" />
 
-              <label>Contraseña:</label>
-              <input type="password" {...register("password", { required: true })} />
+              
+              <input type="password" {...register("password", { required: true })} placeholder="Contraseña"/>
 
               <button type="submit" className="home-link">Iniciar Sesión</button>
             </article>
           </form>
           
         {/* </section> */}
-          <article className="login-success">
+          
+            <article className="login-success">
+
             <Link to="/register">
-              <button className="home-link">Registrarse</button>
+              <p>¿No tienes cuenta? Regístrate</p>
             </Link>
-          </article>
+            </article>
+            <article>
+              <Link to="">
+                <a>Ingresar como Administrador</a>
+              </Link>
+            </article>
         </section>
       )}
     </>

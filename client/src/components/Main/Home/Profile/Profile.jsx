@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ResponsiveContainer, PieChart, Pie, Legend, Cell } from 'recharts';
 import axios from "axios";
 import Navegation from '../../Navegation/Navegation';
-
+import Tools from '../../../../../public/assets/Tools.svg';
 
 const Profile = () => {
   const [stats, setStats] = useState([]);
@@ -31,6 +31,7 @@ const Profile = () => {
   
   return (
     <>
+    <img src={Tools} className="tools-img"></img>
     <h1>Hola, Jugador</h1>
     <h2>Estadísticas:</h2>
     <div style={{ width: '100%', height: 300 }}>

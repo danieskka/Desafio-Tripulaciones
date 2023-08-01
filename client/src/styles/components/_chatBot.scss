@@ -1,0 +1,17 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.chat-img {
+    display: flex;
+    // align-items: center;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.arrow-chat-img {
+    margin: 10px;
+}

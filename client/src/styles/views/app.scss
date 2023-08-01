@@ -10,7 +10,7 @@ h1, h2, h3, h4{
     font-family: Kanit;
 }
 h1{
-    font-size: 1.1em;
+    font-size: 2em;
     text-align: center;
 }
 h2{
@@ -24,7 +24,7 @@ h4{
 }
 p, label, li{
     font-family: Montserrat;
-    font-size: .8em;
+    font-size: 1em;
 }
 button{
     border-radius: 8px;
@@ -34,6 +34,7 @@ button{
     border: none;
     background: $main-gradient-color;
     width: 11em;
+    color: black;
 }
 button:hover{
     cursor: pointer;
