@@ -14,6 +14,9 @@ import Welcome from './Welcome/Welcome';
 import Article from './Home/Info/Resources/Article/Article';
 import ChatBot from './Home/Info/ChatBot/ChatBot';
 import User from './Home/Profile/User/User';
+import Admin from './Home/LoginAdmin/Admin/Admin';
+import LoginAdmin from './Home/LoginAdmin/LoginAdmin';
+
 
 
 const Main = () => {
@@ -23,7 +26,7 @@ const Main = () => {
         <Routes>
           <Route path="/" element={<Welcome/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/register" element={<SignUp/>}/>
+          <Route path="/register" element={<SignUp/>}/>   
           <Route path="/signin" element={<LogIn/>}/>
           <Route path="/signout" element={<LogOut/>}/>
           <Route path="/info" element={<Info/>}/>
@@ -36,6 +39,8 @@ const Main = () => {
           <Route path="/chatbot" element={<ChatBot/>}/>  
           <Route path="/article" element={<Article/>}/>
           <Route path="/user" element={<User/>}/>
+          <Route path="/adminlogin" element={<LoginAdmin/>}/>
+          <Route path="/admin" element={<Admin/>}/>
         </Routes>
       </main>
     </>

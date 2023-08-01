@@ -1,0 +1,36 @@
+.sectionAdmin{
+    background: url(assets/path_group.png);
+    background-size:  cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin:  auto;
+    padding-top: 2em;
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1.4em;
+        width: 90%;
+    }
+    img{
+        margin-bottom: .8em;
+    }
+    p{
+        padding-left: 15px;
+    }
+}
+.logoAdeminContainer{
+    display: flex;
+    justify-content:flex-end;
+    
+}
+.logoAdmin{
+    width: 2em;
+    margin-right: 10px;
+}
+.AdminContainer{
+    position: relative;
+    margin-top: -4em;
+}

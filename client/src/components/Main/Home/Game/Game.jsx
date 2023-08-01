@@ -13,7 +13,7 @@ const Game = () => {
               {/* <Link to="/minilecture"><article className="link_to_minilecture"></article></Link> */}
               <img src="assets/Camino.svg" />
             </article>
-          <Link className="buttonGame" to='/gamequiz' ><img src="assets/Camino 1.png" alt="boton" /></Link>
+          <Link className="buttonGame" to='/minilecture' ><img src="assets/Camino 1.png" alt="boton" /></Link>
           <div className="nav_fixed">
             <Link to="/home">        
               <div className="iconNavigation">
