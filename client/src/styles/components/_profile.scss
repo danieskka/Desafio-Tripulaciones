@@ -17,3 +17,18 @@
   display: "flex"; 
   justify-content: "flex-end";
 }
+
+.games-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.background-img {
+  background: url(assets/path_group.png);
+  background-size:  cover;
+}
+
+.profile-titles {
+  margin-left: 40px;
+}
