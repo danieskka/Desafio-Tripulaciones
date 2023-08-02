@@ -29,7 +29,7 @@ const Home = () => {
         <article className="progressHomeContainer">
           <h2>Mira tu progreso</h2>
           <img className="progressMapGame" src="assets/Acceso Directo a juego.svg" alt="Progreso" />
-          <Link to="/game"> <button className="quizNextQuestion">SEGUIR JUGANDO</button> </Link> 
+          <Link to="/game"> <button className="quizNextQuestion" id='home_keep_playing'>SEGUIR JUGANDO</button> </Link> 
         </article>
           <h2>Para ti</h2>
         <article className="galleryHomeContainer">

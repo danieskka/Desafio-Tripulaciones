@@ -26,7 +26,9 @@ const LogIn = () => {
           <article className="login-success">
             <p>¡Has iniciado sesión con éxito!</p>
             <img src={RegisterSucc} alt="Mensaje de inicio de sesión" />
+            <button>
             <Link to="/home" className="home-link">Ir al inicio</Link>
+            </button>
           </article>
         </section>
       ) : (

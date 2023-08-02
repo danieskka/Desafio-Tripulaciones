@@ -1,3 +1,5 @@
+@import './../utils/variables.scss';
+
 .navigationContainer{
     display: flex;
     flex-direction: row;
@@ -23,4 +25,3 @@
     // background-blend-mode:   hard-light;
     background-size:  contain;
 }
-

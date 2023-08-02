@@ -82,14 +82,14 @@ const Register = ({ handleSignup }) => {
 
             {currentPage === 2 && (
               <>
-                <label>Email:</label>
-                <input type="email" {...register("email", { required: true })} />
+                
+                <input type="email" {...register("email", { required: true })} placeholder="Correo electrónico"/>
 
-                <label>Password:</label>
-                <input type="password" {...register("password", { required: true })} />
+                
+                <input type="password" {...register("password", { required: true })} placeholder="Contraseña"/>
 
-                <label>Confirm Password:</label>
-                <input type="password" {...register("confirm_password", { required: true })}/>
+                
+                <input type="password" {...register("confirm_password", { required: true })} placeholder="Repetir contraseña"/>
 
                 <label>
                 <input
