@@ -1,54 +1,82 @@
+.leftarrow {
+    margin-top: 3em;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/leftArrow.svg');
+    //background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 .zonegeneral {
-    background-color: rgb(212, 212, 212);
+    //background-color: rgb(212, 212, 212);
     display: flex;
     flex-direction: column;
     align-items: center;
     
 
     .leaflet-container {
-        width: 66%;
-        height: 40vh;
-        border:black solid 5px;
+        width: 90%;
+        height: 56vh;
+        //border:black solid 5px;
       }
-    .mapcontainer{
+    .mapcontainer {
         display: flex;
         justify-content: center;
         width: 100%;
     }
 
-    .mapinfogeneral{
+    .mapinfogeneral {
         margin-top: 20px;
-        width: 75%;
-        background-color: rgb(183, 183, 183);
+        width:90%;
+        //background-color: rgb(183, 183, 183);
     }
 
-    .infofilters{
+    .infofilters {
         margin-top: 20px;
         height: 40px;
         display: flex;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content:space-between;
         flex-wrap: wrap;
         background-color: rgb(213, 175, 175);
     }
 
+    
     .b_filter {
-        width: 20%;
-        height: 50%;
+        width: 7.6em;
+        height: 32px;
+        
     }
+    
 
     .infosearch {
-        margin-top: 20px;
-        height: 40px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(213, 175, 175);
+        flex-direction: column;
+        //background-color: rgb(203, 170, 59);
     }
 
-    #getProvinceName{
+    .infosearch_input {
+        height: 48px;
+        //background-image: '../../assets/input_search.png';
+        //background-image: 'assets/input_search.png';
+        background: url(assets/input_search.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #getProvinceName {
         height: 50%;
         margin-left: 10px;
+    }
+
+    .briconsejo {
+        //background: url(assets/briconsejo.png);
+        //background-repeat: no-repeat;
+        //background-position: center center;
+        width: 100%;
+        background-color: aquamarine;
+    
     }
     
 }

@@ -7,9 +7,14 @@ import Navegation from '../../../Navegation/Navegation';
 const Zone = () => {
   return (
     <>
+    
+      
+    <Link to="/info"><section className="leftarrow"></section></Link>
+      
+      
       <section className='zonegeneral'>
-        <Link to="/info"><p>back to Formación</p></Link>
-        <h2>Tu Zona</h2>
+    
+      <h1>Mapa de calor</h1>
 
         <MapView />
         <MapInfo />

@@ -177,15 +177,22 @@ const MapInfo = () => {
   <section className='mapinfogeneral'>
     
     <article className="infosearch">
-    <p>Elige ciudad:</p>
-  <input type="text" placeholder="Madrid City" id="getProvinceName" name="name"></input>
+    <p>¿Qué zona te interesa consultar?</p>
+    <div className="infosearch_input"></div>
+
+  {/* <input type="text" placeholder="Madrid City" id="getProvinceName" name="name"></input> */}
   </article>
   <article className="infofilters">
     <button className="b_filter" onClick={() => onClickFilter('today')}>Hoy</button>
     <button className="b_filter" onClick={() => onClickFilter('tomorrow')}>Mañana</button>
-    <button className="b_filter" onClick={() => onClickFilter('afterTomorrow')}>Pasado mañana</button>
+    <button className="b_filter" onClick={() => onClickFilter('afterTomorrow')}>Pasado</button>
   </article>
+  <article>
   {activeFilterWeatherData && <OneDayInfo weatherData={activeFilterWeatherData} />}
+  </article>
+  <article className='briconsejo'>
+
+  </article>
   </section>
 
   )
