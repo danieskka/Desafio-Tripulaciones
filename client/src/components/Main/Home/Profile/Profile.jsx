@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 import Navegation from '../../Navegation/Navegation';
 import Tools from '../../../../../public/assets/Tools.svg';
-import { Link } from "react-router-dom";
 
 
 const Profile = () => {
