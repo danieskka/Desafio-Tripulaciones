@@ -15,8 +15,8 @@ const saltRounds = 10;
   * </pre>
   * @memberof middlewares 
   * @method signUpUser  Registra usuario y encripta password
-  * @method checkEmailLogIn 
-  * @method authCheck  Requiere token, desencripta email y compara con BBDD 
+  * @method checkEmailLogIn  Recoge email y password para comprobar que existe
+  * @method authCheck  Requiere token, desencripta email  del token para acceder a otros datos 
   * @async 
   * @param {Object} req objeto de petición HTTP
   * @param {Object} res objeto de respuesta HTTP
@@ -48,7 +48,7 @@ const signUpUser = async(req, res, next) => {
 };
 
 // Login
-const checkEmailLogIn = async(req, res, next) => {
+const checkEmailLogIn = async(req, res, next) => {  //recoge email y password para comprobar que existe
     let {email, password} = req.body;
     try {
         let data = await users.getUsersByEmail(email);
@@ -72,7 +72,7 @@ const checkEmailLogIn = async(req, res, next) => {
     }
 }
 
-const authCheck = (req, res, next) => {
+const authCheck = (req, res, next) => {  //decodifica el email del token para acceder a otros datos 
     const token = req.cookies["access-token"];
     if(token){
         jwt.verify(token, jwtSecret, async (err, decoded) => {
