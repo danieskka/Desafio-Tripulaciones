@@ -5,25 +5,25 @@ const Navegation = () => {
   return (
     <div className="navigationContainer">
       <Link to="/home">        
-        <div className="iconNavigation">
+        <div className="iconNavigation" id='navigation_home'>
           <img src="assets/Home.svg" alt="home" />
           <span>Home</span>
         </div>
       </Link>
       <Link to="/game">        
-        <div className="iconNavigation">
+        <div className="iconNavigation" id='navigation_game'>
         <img src="assets/juego.svg" alt="juego" />
           <span>Juego</span>
         </div>
       </Link>
       <Link to="/info">        
-        <div className="iconNavigation">
+        <div className="iconNavigation" id='navigation_info'>
         <img className="formacion" src="assets/Formación.svg" alt="formación" />
           <span>Formación</span>
         </div>
       </Link>
       <Link to="/profile">  
-        <div className="iconNavigation">
+        <div className="iconNavigation" id='navigation_profile'>
           <img src="assets/perfil.svg" alt="perfil" />
           <span>Perfil</span>
         </div>

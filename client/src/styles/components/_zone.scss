@@ -40,15 +40,28 @@
         align-items: center;
         justify-content:space-between;
         flex-wrap: wrap;
-        background-color: rgb(213, 175, 175);
+        //background-color: rgb(213, 175, 175);
     }
 
     
     .b_filter {
         width: 7.6em;
         height: 32px;
+        background:#FCF2B7;
         
     }
+
+    .b_filter:hover {
+        background: linear-gradient(90deg, rgb(218, 84, 60) 35%, rgb(250, 234, 135) 100%);
+           
+    }
+
+    .b_filter:visited {
+        background: linear-gradient(90deg, rgb(218, 84, 60) 35%, rgb(250, 234, 135) 100%);
+           
+    }
+
+
     
 
     .infosearch {
@@ -59,8 +72,6 @@
 
     .infosearch_input {
         height: 48px;
-        //background-image: '../../assets/input_search.png';
-        //background-image: 'assets/input_search.png';
         background: url(assets/input_search.png);
         background-repeat: no-repeat;
         background-position: center center;
@@ -72,11 +83,12 @@
     }
 
     .briconsejo {
-        //background: url(assets/briconsejo.png);
-        //background-repeat: no-repeat;
-        //background-position: center center;
+        background: url(assets/briconsejo.png);
+        background-repeat: no-repeat;
+        background-position: center center;
         width: 100%;
-        background-color: aquamarine;
+        height: 150px;
+        //background-color: aquamarine;
     
     }
     
