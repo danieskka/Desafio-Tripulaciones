@@ -56,7 +56,7 @@ const Welcome = () => {
             </Link>
             </article>
             <article>
-              <Link to="/loginAdmin">
+              <Link to="/adminlogin">
                 <a>Ingresar como Administrador</a>
               </Link>
             </article>
