@@ -6,6 +6,26 @@ const jwtSecret = process.env.JWT_SECRET;
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+
+
+/** 
+  * <pre>
+  * POST http://localhost:3000/signup  -->  Envía datos de usuario del formulario Register
+  * POST  http://localhost:3000/login -->   Checkea email y password de usuario para confirmar autenticación
+  * </pre>
+  * @memberof middlewares 
+  * @method signUpUser  Registra usuario y encripta password
+  * @method checkEmailLogIn 
+  * @method authCheck  Requiere token, desencripta email y compara con BBDD 
+  * @async 
+  * @param {Object} req objeto de petición HTTP
+  * @param {Object} res objeto de respuesta HTTP
+  * @param {Object} next 
+  * @return {json} para login
+  * @throws {error} 
+  */
+
+
 // SignUp
 const signUpUser = async(req, res, next) => {
     let data;
