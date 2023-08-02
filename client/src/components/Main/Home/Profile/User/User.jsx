@@ -32,14 +32,20 @@ const User = () => {
           </article>
         </section>
       ) : (
-    <section className="container">
-      <h1>Ajustes</h1>
-      <article className="article-container">
-        <img src={Img28} className="img28"></img>
-      </article>
-      <article className="article-container">
-        <img src={LogOut} className="logoutimg" onClick={handleLogOut}></img>
-      </article>
+    <section>
+      <Link to="/profile">
+        <article className="leftarrow">
+        </article>
+      </Link>
+      <section className="container">
+        <h1>Ajustes</h1>
+        <article className="article-container">
+          <img src={Img28} className="img28"></img>
+        </article>
+        <article className="article-container">
+          <img src={LogOut} className="logoutimg" onClick={handleLogOut}></img>
+        </article>
+      </section>
     </section>
     )}
     </>

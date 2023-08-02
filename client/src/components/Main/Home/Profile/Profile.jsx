@@ -26,7 +26,7 @@ const Profile = () => {
 
   const getChartData = () => {
     return stats.map((game, index) => ({
-      name: `Game ${index + 1}: Puntuación ${game}`,
+      name: `Partida ${index + 1}: Puntuación ${game}`,
       value: game,
     }));
   };
@@ -34,8 +34,9 @@ const Profile = () => {
   return (
     <>
     <section className="background-img">
-    <Link to="/info"><section className="leftarrow"></section></Link>
+    <article className="logoAdeminContainer">
     <Link to="/User"> <img src={Tools} className="tools-img"></img> </Link>
+    </article>
     <h1>Hola, Jugador</h1>
     <h2 className="profile-titles">Estadísticas:</h2>
     <div style={{ width: '100%', height: 300 }}>
@@ -46,12 +47,12 @@ const Profile = () => {
               <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
             ))}
           </Pie>
-          <Legend />
+          {/* <Legend /> */}
         </PieChart>
       </ResponsiveContainer>
     </div>
     <h2 className="profile-titles"> Mis Partidas:</h2>
-    <article>
+    <article className="games-profile">
         {stats.map((game, index) => (
           <article key={index} className="games-box">
             <p>Partida {index + 1}</p>
