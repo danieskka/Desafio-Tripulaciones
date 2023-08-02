@@ -4,6 +4,7 @@ import Navegation from '../../../Navegation/Navegation';
 const MiniLecture = () => {
   return (
     <>
+    <Link to="/game" ><section className="leftarrow"></section> </Link>
       <section className="homeWrapper">
         <h1>OLAS DE CALOR</h1>
         <h2>Sobreviviendo al Calor Extremo</h2>

@@ -34,3 +34,15 @@
     position: relative;
     margin-top: -4em;
 }
+
+@media (min-width: 850px) {
+
+    .sectionAdmin{
+        p{
+            text-align: center;
+        }
+    }
+    .containerArticlesAdmin{
+        width: 0%;
+    }
+}

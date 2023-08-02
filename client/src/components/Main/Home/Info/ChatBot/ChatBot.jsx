@@ -2,6 +2,8 @@ import React from "react";
 import Maria from '../../../../../../public/assets/MAR IA.svg';
 import Chat from '../../../../../../public/assets/Frame 24.svg';
 import Arrow from '../../../../../../public/assets/Size=32.svg';
+import { Link } from "react-router-dom";
+
 
 const ChatBot = () => {
 
@@ -9,6 +11,7 @@ const ChatBot = () => {
 
   return (
     <>
+    <Link to="/info"><section className="leftarrow"></section></Link>
     <h1>Profesora Virtual</h1>
     <article className="chat-container">
       <img src={Maria} className="chat-img"></img>

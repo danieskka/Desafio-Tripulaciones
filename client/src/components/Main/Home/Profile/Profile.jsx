@@ -3,6 +3,8 @@ import { ResponsiveContainer, PieChart, Pie, Legend, Cell } from 'recharts';
 import axios from "axios";
 import Navegation from '../../Navegation/Navegation';
 import Tools from '../../../../../public/assets/Tools.svg';
+import { Link } from "react-router-dom";
+
 
 const Profile = () => {
   const [stats, setStats] = useState([]);
@@ -31,6 +33,7 @@ const Profile = () => {
   
   return (
     <>
+    <Link to="/info"><section className="leftarrow"></section></Link>
     <img src={Tools} className="tools-img"></img>
     <h1>Hola, Jugador</h1>
     <h2>Estadísticas:</h2>
