@@ -1,5 +1,20 @@
 import {Link} from "react-router-dom";
 
+
+/** 
+  * <pre>
+  * COMPONENTE DE NAVEGACIÓN PARA VISTA MOVIL, EL CUAL SE MUESTRA EN LA PARTE INFERIOR DE PANTALLA.
+  * RUTAS: 
+  * http://localhost:5173/home  --> Para la home.
+  * http://localhost:5173/game  --> Para la primera vista de navegación previa a la minilección y al quiz.
+  * http://localhost:5173/info  --> Para la vista de formación.
+  * http://localhost:5173/profile --> Para la vista de Perfil con info de usuario
+  * </pre>
+  * @memberof Navegation 
+  * @return {html} objeto con todas las ofertas encontradas
+  */
+
+
 const Navegation = () => {
 
   return (
@@ -33,6 +48,19 @@ const Navegation = () => {
 }
 export default Navegation;
 
+
+/** 
+  * <pre>
+  * MENU HAMBURGUESA COMPONENTE PERFECTAMENTE FUNCIONAL. NO IMPLEMENTADO EN PRESENTACIÓN POR PREFERENCIAS DE UX/UI. FUTURIBLE PARA VERSIÓN TABLET.
+  * RUTAS: 
+  * http://localhost:5173/home  --> Para la home.
+  * http://localhost:5173/game  --> Para la primera vista de navegación previa a la minilección y al quiz.
+  * http://localhost:5173/info  --> Para la vista de formación.
+  * http://localhost:5173/profile --> Para la vista de Perfil con info de usuario
+  * </pre>
+  * @memberof Navegation 
+  * @return {html} objeto con todas las ofertas encontradas
+  */
 
 //MENU HAMBURGUESA COMPONENTE
 

@@ -5,6 +5,19 @@ import Navegation from '../Navegation/Navegation';
 import { Link } from "react-router-dom";
 
 
+/** 
+  * <pre>
+  * COMPONENTE HOME CON COMPONENTE ANIDADO GALLERY COMO SLIDER DE NOTICIAS. 
+  * ARTÍCULOS DE NOTICIAS EXPORTADOS DESDE INDEX.JS Y MAPEADO PARA IMPRIMIR EN EL COMPONENTE GALLERY CON LINKS A OTRAS VISTAS COMO /zone.
+  * ANIDADO TAMBIÉN AL PIE, EL COMPONENTE NAVEGATION PARA NAVEGACIÓN DE LA PÁGINA.
+  * </pre>
+  * @memberof Home 
+  * @return {html} objeto con todas las ofertas encontradas
+  */
+
+
+
+
 const Home = () => {
 
   const printNews = () => {

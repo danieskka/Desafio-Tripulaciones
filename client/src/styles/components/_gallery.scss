@@ -11,19 +11,19 @@
     // flex: 1; /* Ocupa el espacio disponible dentro del contenedor */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    min-height: 8em; /* Establece un ancho mínimo para la tarjeta */
-    min-width: 9em;
+    min-height: 14em; /* Establece un ancho mínimo para la tarjeta */
+    min-width: 14em;
     padding: 10px 3px;
-    border-radius: 8px;
     cursor: pointer;
   
     h3{
         margin:12px 10px 5px;
+        font-size: 14px;
     }
     img{
-        width: 90%;
+        max-width: 10em;
         border-radius: 8px;
     }
 }

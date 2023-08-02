@@ -195,7 +195,7 @@ const QuitGame = () => {  //Alerta cuando se abandona el juego.
             <div className="buttonsQuizResults">
                 <Link to='/game'><button className="seguirJugandoButton">Seguir jugando</button></Link>
                 <div className="resultsButtonWrapper">
-                  <Link to="/gamequiz"><button className="resultButton" onClick={resetQuiz}>Repetir test</button></Link>
+                  <Link to="/juego"><button className="resultButton" onClick={resetQuiz}>Repetir test</button></Link>
                   <Link to='/profile'><button className="resultButton">Ver perfil</button></Link>  
                 </div>
             </div>

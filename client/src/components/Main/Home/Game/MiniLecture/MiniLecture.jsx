@@ -39,7 +39,7 @@ const MiniLecture = () => {
           <h3>¿Listo para poner a prueba lo aprendido?</h3>
         </article>
 
-        <Link to="/gamequiz">
+        <Link to="/juego">
         <button className="quizNextQuestion">EMPEZAR TEST</button>
         </Link>
       </section>

@@ -4,9 +4,14 @@
 margin: auto;
 width: 95%;
 }
-
+.articlenotfoundwrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .articleNotFound{
-    max-width: 20em;
+    max-width: 25em;
+    margin: auto;
 }
 .resourcesSliderMenu{
     display: flex;
@@ -27,7 +32,7 @@ width: 95%;
 }
 .resourcesSliderMenu::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
-    height: 11px;
+    height: 4px;
   }
   
 .resourcesSliderMenu::-webkit-scrollbar-track {
