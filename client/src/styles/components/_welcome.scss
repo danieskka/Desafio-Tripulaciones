@@ -54,3 +54,31 @@
     }
   }
 }
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first-article {
+  display: flex;
+  align-items: center;
+}
+
+.first-article img {
+  margin-right: 20px;
+}
+
+.other-article {
+  margin-top: 30px;
+}
+
+.other-article img {
+  display: block;
+  margin-right: auto;
+}
+
+.last-article {
+  margin-top: 50px;
+  float: left;
+}
