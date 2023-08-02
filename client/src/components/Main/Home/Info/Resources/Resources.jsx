@@ -3,6 +3,8 @@ import { articles } from "./index";
 import { v4 as uuidv4 } from 'uuid';
 import Articles from './Articles/Articles';
 import Navegation from '../../../Navegation/Navegation';
+import { Link } from "react-router-dom";
+
 
 const Resources = () => {
   const [showArticles, setShowArticles] = useState(true);
@@ -29,6 +31,7 @@ const Resources = () => {
 
   return (
     <>
+    <Link to="/info"><section className="leftarrow"></section></Link>
       <section className="sectionResources">
         <div className="resourcesSliderMenu">
           <h3 className="h3Resources" onClick={toggleArticles}>Olas de Calor</h3>

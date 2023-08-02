@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 import Navegation from '../../Navegation/Navegation';
 import Tools from '../../../../../public/assets/Tools.svg';
+import { Link } from "react-router-dom";
+
 
 const Profile = () => {
   const [stats, setStats] = useState([]);
@@ -33,9 +35,8 @@ const Profile = () => {
   return (
     <>
     <section className="background-img">
-    <Link to="/User">
-    <img src={Tools} className="tools-img"></img>
-    </Link>
+    <Link to="/info"><section className="leftarrow"></section></Link>
+    <Link to="/User"> <img src={Tools} className="tools-img"></img> </Link>
     <h1>Hola, Jugador</h1>
     <h2 className="profile-titles">Estadísticas:</h2>
     <div style={{ width: '100%', height: 300 }}>

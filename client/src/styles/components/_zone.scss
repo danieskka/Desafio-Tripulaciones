@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     
-   
 
     .leaflet-container {
         width: 66%;
@@ -52,4 +51,14 @@
         margin-left: 10px;
     }
     
+}
+.leftarrow {
+    // margin-top: 3em;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/leftArrow.svg');
+    // background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }

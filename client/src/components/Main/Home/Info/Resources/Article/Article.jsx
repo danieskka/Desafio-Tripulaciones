@@ -1,10 +1,13 @@
 import Navegation from '../../../../Navegation/Navegation';
+import { Link } from "react-router-dom";
+
 
 
 
 const Article = () => {
   return (
     <>
+    <Link to="/resources"><section className="leftarrow"></section></Link>
       <section className="articleContentWrapper">
         <h1>El efecto isla de calor urbano ¿qué es y cómo solucionarlo?</h1>
         <img className="imgArticle" src="assets/PICTURE 17.png" alt="ciudad" />
