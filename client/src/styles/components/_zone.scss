@@ -1,0 +1,105 @@
+.leftarrow {
+    margin-top: 3em;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/leftArrow.svg');
+    //background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.zonegeneral {
+    //background-color: rgb(212, 212, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .leaflet-container {
+        width: 90%;
+        height: 56vh;
+        //border:black solid 5px;
+      }
+    .mapcontainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mapinfogeneral {
+        margin-top: 20px;
+        width:90%;
+        //background-color: rgb(183, 183, 183);
+    }
+
+    .infofilters {
+        margin-top: 20px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        //background-color: rgb(213, 175, 175);
+    }
+
+    
+    .b_filter {
+        width: 7.6em;
+        height: 32px;
+        background:#FCF2B7;
+        
+    }
+
+    .b_filter:hover {
+        background: linear-gradient(90deg, rgb(218, 84, 60) 35%, rgb(250, 234, 135) 100%);
+           
+    }
+
+    .b_filter:visited {
+        background: linear-gradient(90deg, rgb(218, 84, 60) 35%, rgb(250, 234, 135) 100%);
+           
+    }
+
+
+    
+
+    .infosearch {
+        display: flex;
+        flex-direction: column;
+        //background-color: rgb(203, 170, 59);
+    }
+
+    .infosearch_input {
+        height: 48px;
+        background: url(assets/input_search.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #getProvinceName {
+        height: 50%;
+        margin-left: 10px;
+    }
+
+    .briconsejo {
+        background: url(assets/briconsejo.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 150px;
+        margin-bottom:5em ;
+        //background-color: aquamarine;
+    
+    }
+    
+}
+.leftarrow {
+    // margin-top: 3em;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/leftArrow.svg');
+    // background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}

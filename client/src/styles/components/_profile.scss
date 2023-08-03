@@ -1,0 +1,42 @@
+.profile-bar-chart {
+    width: 800;
+    height: 400;
+    .recharts-cartesian-grid-horizontal {
+      stroke-opacity: 0.1;
+    }
+  
+.recharts-tooltip-wrapper {
+      background-color: #c59292;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(235, 171, 171, 0.1);
+    }
+}
+
+.tools-img {
+  display: "flex"; 
+  justify-content: "flex-end";
+  margin-top: 100px;
+  margin-right: 20px;
+}
+
+.games-box {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(226 208 95 / 33%);
+}
+
+.background-img {
+  background: url(assets/path_group.png);
+  background-size:  cover;
+  margin-bottom:5em ;
+}
+
+.profile-titles {
+  text-align: center;
+}
+
+.games-profile {
+  margin-left: 50px;
+  margin-right: 50px;
+}

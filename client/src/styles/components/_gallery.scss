@@ -1,0 +1,30 @@
+@import './../utils/variables.scss';
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    
+
+}
+.galleryCard{
+    // flex: 1; /* Ocupa el espacio disponible dentro del contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 14em; /* Establece un ancho mínimo para la tarjeta */
+    min-width: 14em;
+    padding: 10px 3px;
+    cursor: pointer;
+  
+    h3{
+        margin:12px 10px 5px;
+        font-size: 14px;
+    }
+    img{
+        max-width: 10em;
+        border-radius: 8px;
+    }
+}

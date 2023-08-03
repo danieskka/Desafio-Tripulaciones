@@ -1,0 +1,59 @@
+@import './../utils/variables.scss';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    padding-bottom: 1.2em;
+}
+h1, h2, h3, h4{
+    font-family: Kanit;
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+h2{
+    font-size: 1.6em;
+}
+h3{
+    font-size: 1.1em;
+}
+h4{
+    font-size: 1em;
+}
+p, label, li{
+    font-family: Montserrat;
+    font-size: 1em;
+}
+button{
+    border-radius: 8px;
+    font-family: Montserrat;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    background: $main-gradient-color;
+    width: 11em;
+    color: black;
+}
+button:hover{
+    cursor: pointer;
+    background-color: $second-red-color;
+    color:white
+}
+button:active{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.32) inset;
+}
+a {
+    color:black;
+    text-decoration: none;
+}
+a:visited{
+    color:black;
+    text-decoration: none;
+}
+a:link {   
+    text-decoration: none; 
+}  
+a:link {   text-decoration: none; }  a:visited {   text-decoration: none; }
