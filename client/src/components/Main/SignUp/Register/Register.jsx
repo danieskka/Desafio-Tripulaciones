@@ -11,8 +11,34 @@ const Register = ({ handleSignup }) => {
   
   const totalPages = 2;
 
+  const regexEmail = (email) => {
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const validPassword = (password) => {
+    const passRegex = /^(?=.*\d).{6,}$/;
+    return passRegex.test(password);
+  };
+
   const onSubmit = async (data) => {
-    try {
+
+    if (currentPage === 2) {
+
+      const { email, password } = data;
+
+      if (!regexEmail(email)) {
+        alert('El correo electrónico no es válido.');
+        return;
+      }
+
+      if (!validPassword(password)) {
+        alert('La contraseña no es válida. Debe tener al menos 6 caracteres y un carácter númerico.');
+        return;
+      }
+  }
+    
+  try {
       // Si estamos en la última página, enviamos los datos al backend
       if (currentPage === totalPages) {
         await handleSignup(data);
@@ -51,7 +77,6 @@ const Register = ({ handleSignup }) => {
                 <label>Fecha de Nacimiento</label>
                 <input placeholder="Fecha de Nacimiento" type="date" {...register("birth_date", { required: true })} />
 
-
                 <select {...register("gender", { required: true })}>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -59,9 +84,7 @@ const Register = ({ handleSignup }) => {
                   <option value="not-specified">Not Specified</option>
                 </select>
 
-
                 <input placeholder="Código Postal" type="text" {...register("zip_code")} />
-
 
                 <select  {...register("number_of_children")}>
                   <option value="#children">Número de hijos</option>
@@ -85,17 +108,12 @@ const Register = ({ handleSignup }) => {
                 
                 <input type="email" {...register("email", { required: true })} placeholder="Correo electrónico"/>
 
-                
                 <input type="password" {...register("password", { required: true })} placeholder="Contraseña"/>
 
-                
                 <input type="password" {...register("confirm_password", { required: true })} placeholder="Repetir contraseña"/>
 
                 <label>
-                <input
-                    type="checkbox"
-                    {...register("acceptTerms", { required: true })}
-                  />
+                <input type="checkbox" {...register("acceptTerms", { required: true })} />
                     Acepto los{" "}
                     <Link to="/terminos-y-condiciones" target="_blank">
                       términos de uso y políticas de privacidad.
