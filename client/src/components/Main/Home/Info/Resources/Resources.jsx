@@ -43,8 +43,9 @@ const Resources = () => {
         </div>
         <h1>Recursos</h1>
         {showHealthImage && (
-          <div>
-            <img className="articleNotFound" src="assets/isla_de_calor_urbano_mini_leccion.jpg" alt="isla de calor urbano" />
+          <div className="articlenotfoundwrapper">
+            <h1>Oooops!  Página en construcción</h1>
+            <img className="articleNotFound" src="https://media.istockphoto.com/id/165182593/photo/error.webp?b=1&s=170667a&w=0&k=20&c=IQK53Ivt84IDFBJuEKNZ922BAim1voIebmS6FHQI5CY=" alt="Pagina en construcción" />
           </div>
         )}
       <article>

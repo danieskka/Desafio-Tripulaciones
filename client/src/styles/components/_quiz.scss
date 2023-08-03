@@ -142,26 +142,31 @@ width: 10%;
                                         flex-direction: column;
                                     }
 
-@media (min-width: 1050px) {
-    .optionsWrapper {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin: auto;
-
-    }
-    .labelOptionQuiz{
-        margin: 1.5em 1em;
-        width: 45%;
-    }
-    .QuizButtons{
-        width: 12em;
-    }
-}
-@media (min-width: 650px) {
-
-    .sectionQuiz{
-        width: 80%;
-        margin: auto;
-    }
-}
+// @media (min-width: 1050px) {
+//     .optionsWrapper {
+//         display: flex;
+//         flex-direction: row;
+//         width: 100%;
+//         margin: auto;
+//     }
+//     .labelOptionQuiz{
+//         margin: 1.5em 1em;
+//         width: 45%;
+//     }
+//     .QuizButtons{
+//         width: 12em;
+//     }
+//     .sectionQuiz{
+//         width: 80%;
+//         margin: 2em auto;
+//     }
+//     .headQuiz{
+//         margin-top: 2em;
+//     }
+// }
+// @media (min-width: 650px) {
+//     .sectionQuiz{
+//         width: 80%;
+//         margin: 2em auto;
+//     }
+// }

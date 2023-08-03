@@ -2,7 +2,7 @@
 
 const Gallery = ({ head, img, url }) => {
 
-  return (
+    return (
     <>
       <a href={url}>
           <div className="galleryCard" id='tracking_gallery_cards'>
