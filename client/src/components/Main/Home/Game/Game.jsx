@@ -12,12 +12,11 @@ const Game = () => {
             </article>
             <article className="game_bg_quiz">
               {/* <Link to="/minilecture"><article className="link_to_minilecture"></article></Link> */}
+              <Link className="buttonGame" to='/minilecture' ><img src="assets/Camino 1.png" alt="boton" /></Link>
               <img src="assets/Camino.svg" />
             </article>
             <Navegation/>
       </section>
-     
-
     </>
   );
 };
