@@ -1,0 +1,172 @@
+@import './../utils/variables.scss';
+
+.sectionQuiz{
+    margin-top: 3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.questionContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    label{
+        font-size: 0.9em;
+    }
+    h3{
+        margin-left: 16px;
+    }
+}
+.labelOptionQuiz{
+    border-radius: 10px;
+    background-color: $secondary-medium-light-yellow;
+    padding: 13px 10px;
+    line-height: 23px;
+    width: 90%;
+    margin: 0 auto 1em;
+}
+.labelOptionQuiz:hover{
+    background-color: #fbefa9;
+    cursor: pointer;
+}
+.labelOptionQuiz:active{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.32) inset;
+}
+.optionSelected{
+    background-color: rgb(85, 198, 246);
+}
+.headQuiz{
+    display: flex;
+    flex-direction: row;
+
+    img{
+        width: 13px;
+        max-height: 20px;
+    }
+    img:hover{
+        cursor: pointer;
+    }
+}
+.quizHeaderWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+}
+.resultsButtonWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.resultButton{
+    margin: 1em auto 0;
+    background: $secondary-medium-light-yellow;
+}
+.QuizButtons{
+    margin: 1em auto 0;
+}
+.seguirJugandoButton{
+    margin: 5px auto;
+    width: 100%;
+}
+.quizResults{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    margin-top: 3em;
+    text-align: justify;
+    img{
+        width: 15em;
+        margin: auto;
+    }
+    h2{
+        text-align: center;
+    }
+}
+.buttonsQuizResults{
+    display: flex;
+    flex-direction: column;
+}
+.progressBarWrapper{
+width: 80%;
+height: 0.7em;
+background-color: #E6E6E1;
+display: flex;
+flex-direction: row;
+margin: auto;
+}
+.progressBarQuiz0{
+background:$main-red-color;
+width: 10%;
+}
+.progressBarQuiz1{
+    background:$main-red-color;
+    width: 20%;
+    }
+    .progressBarQuiz2{
+        background:$main-red-color;
+        width: 30%;
+        }
+        .progressBarQuiz3{
+            background:$main-red-color;    
+            width: 40%;
+            }
+            .progressBarQuiz4{
+                background:$main-red-color;    
+                width: 50%;
+                }
+                .progressBarQuiz5{
+                    background:$main-red-color;    
+                    width: 60%;
+                    }
+                    .progressBarQuiz6{
+                        background:$main-red-color;    
+                        width: 70%;
+                        }
+                        .progressBarQuiz7{
+                            background:$main-red-color;    
+                            width: 80%;
+                            }
+                            .progressBarQuiz8{
+                                background:$main-red-color;    
+                                width: 90%;
+                                }
+                                .progressBarQuiz9{
+                                    background:$main-red-color;    
+                                    width: 100%;
+                                    }
+
+                                    .optionsWrapper {
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+
+// @media (min-width: 1050px) {
+//     .optionsWrapper {
+//         display: flex;
+//         flex-direction: row;
+//         width: 100%;
+//         margin: auto;
+//     }
+//     .labelOptionQuiz{
+//         margin: 1.5em 1em;
+//         width: 45%;
+//     }
+//     .QuizButtons{
+//         width: 12em;
+//     }
+//     .sectionQuiz{
+//         width: 80%;
+//         margin: 2em auto;
+//     }
+//     .headQuiz{
+//         margin-top: 2em;
+//     }
+// }
+// @media (min-width: 650px) {
+//     .sectionQuiz{
+//         width: 80%;
+//         margin: 2em auto;
+//     }
+// }

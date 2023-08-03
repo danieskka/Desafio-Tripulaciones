@@ -13,7 +13,25 @@ CREATE TABLE users (
     login BOOLEAN DEFAULT false
 );
 
--- Crear usuario Ej:
+-- Create quiz answers table
 
+CREATE TABLE quiz_answers (
+    user_id INT,
+    Q1 VARCHAR (1),
+    Q2 VARCHAR  (1),
+    Q3 VARCHAR  (1),
+    Q4 VARCHAR  (1),
+    Q5 VARCHAR  (1),
+    Q6 VARCHAR  (1),
+    Q7 VARCHAR  (1),
+    Q8 VARCHAR  (1),
+    Q9 VARCHAR  (1),
+    Q10 VARCHAR  (1),
+    total INT
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    ON DELETE CASCADE
+);
+
+-- Crear usuario Ej:
 INSERT INTO userss (email, password, username, birth_date, gender, zip_code, number_of_children)
 VALUES ('ejemplo@email.com', 'contraseña123', 'nombre_usuario', '1990-01-01', 'masculino', '12345', 2);

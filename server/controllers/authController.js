@@ -4,6 +4,22 @@ const jwtSecret = process.env.JWT_SECRET;
 const users = require('../models/users');
 require("dotenv").config();
 
+
+/** 
+  * <pre>
+  * Autenticación de usuarios, Login y Logout. Creación de Token para encriptación de contraseña. Destruye la sesion y limpia la cookies y cambia el estado del usuario a login false en BBDD
+  * </pre>
+  * @memberof controllers 
+  * @method createAndStoreToken
+  * @method destroySessionAndClearCookies
+  * @async 
+  * @param {Object} req objeto de petición HTTP
+  * @param {Object} res objeto de respuesta HTTP
+  * @return {json} 
+  * @throws {token} 
+  */
+
+
 const createAndStoreToken = (req,res)=>{
     
     const payload = {

@@ -2,6 +2,21 @@ const pool = require('../utils/db_pgsql');
 const queries = require('../queries/user.queries');
 
 
+/** 
+  * <pre>
+  *
+  * </pre>
+  * @memberof models 
+  * @method createUser  Conecta con las queries que guardan los datos que llegan por el body de la petición POST en la BBDD tabla users
+  * @method getUsersByEmail  Recoge de la BBDD las partidas y resultados del usuario según el id de usuario Primary Key de la BBDD
+  * @method updateUser  Permite modificar campos de datos de usuario en tabla users.
+  * @method logInUserTrue 
+  * @method logInUserFalse
+  * @async 
+  */
+
+
+
 const createUser = async (newUser) => {
     const { email, password, username, birth_date, gender, zip_code, number_of_children } = newUser;
     let client, result;
@@ -12,7 +27,8 @@ const createUser = async (newUser) => {
     } catch (err) {
         console.log(err);
         throw err;
-    } finally {
+    } 
+    finally {
         client.release();
     }
     return result

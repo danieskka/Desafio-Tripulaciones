@@ -6,16 +6,37 @@ const jwtSecret = process.env.JWT_SECRET;
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+
+
+/** 
+  * <pre>
+  * POST http://localhost:3000/signup  -->  Envía datos de usuario del formulario Register
+  * POST  http://localhost:3000/login -->   Checkea email y password de usuario para confirmar autenticación
+  * </pre>
+  * @memberof middlewares 
+  * @method signUpUser  Registra usuario y encripta password
+  * @method checkEmailLogIn  Recoge email y password para comprobar que existe
+  * @method authCheck  Requiere token, desencripta email  del token para acceder a otros datos 
+  * @async 
+  * @param {Object} req objeto de petición HTTP
+  * @param {Object} res objeto de respuesta HTTP
+  * @param {Object} next 
+  * @return {json} para login
+  * @throws {error} 
+  */
+
+
 // SignUp
 const signUpUser = async(req, res, next) => {
     let data;
     try {
         const {email, password, username, birth_date, gender, zip_code, number_of_children} = req.body;
         const hashPassword = await bcrypt.hash(password, saltRounds);
-        const newUser = {email, "password":hashPassword, username, birth_date, gender, zip_code, number_of_children}
+        const newUser = {email, "password":hashPassword, username, birth_date, gender, zip_code, number_of_children, login:true}
         data = await users.createUser(newUser);
         console.log(data)
         await users.updateUser(email);
+        await users.logInUserTrue(email);
         console.log(email)
 
         req.user = {email};
@@ -27,7 +48,7 @@ const signUpUser = async(req, res, next) => {
 };
 
 // Login
-const checkEmailLogIn = async(req, res, next) => {
+const checkEmailLogIn = async(req, res, next) => {  //recoge email y password para comprobar que existe
     let {email, password} = req.body;
     try {
         let data = await users.getUsersByEmail(email);
@@ -51,7 +72,7 @@ const checkEmailLogIn = async(req, res, next) => {
     }
 }
 
-const authCheck = (req, res, next) => {
+const authCheck = (req, res, next) => {  //decodifica el email del token para acceder a otros datos 
     const token = req.cookies["access-token"];
     if(token){
         jwt.verify(token, jwtSecret, async (err, decoded) => {

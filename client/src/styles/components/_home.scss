@@ -1,0 +1,50 @@
+@import './../utils/variables.scss';
+
+.progressMapGame{
+    max-width: 300px;
+    margin-bottom: 1em;
+}
+.homeWrapper{
+    background: url(assets/path_group.png);
+    background-size:  cover;
+    // background-blend-mode:   hard-light;
+    padding-top: 1em;
+    margin-bottom:5em ;
+}
+.homeWrapper, .progressHomeContainer, .galleryHomeContainer, .game_general_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.galleryHomeContainer{
+    width: 90%;
+    margin: auto;
+    overflow-x: scroll;
+    align-items: flex-start;
+    a{
+        width: 65%;
+    }
+}
+.galleryHomeContainer::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+    height: 4px;
+  }
+  
+  .galleryHomeContainer::-webkit-scrollbar-track {
+    background-color: $main-yellow-color;        /* color of the tracking area */
+    border-radius: 8px;
+  }
+  
+  .galleryHomeContainer::-webkit-scrollbar-thumb {
+    background-color: $main-red-color;    /* color of the scroll thumb */
+    border-radius: 8px;       /* roundness of the scroll thumb */
+    // border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
+.galleryButtons{
+    cursor: pointer;
+    max-height: 40px;
+}
+.progressHomeContainer{
+    margin-bottom: 1.3em;
+}
+
