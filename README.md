@@ -54,3 +54,5 @@ Para poder visualizar nuestro proyecto teneis 2 opciones:
         ![cerrar_sesion](client/public/assets/cerrar_sesion.png)
 
     - Ten en cuenta que solo funciona el boton de cerrar sesión o la flecha de volver al perfil, los otros botones estan desactivados por el momento para una futura versión.
+
+    Se puede acceder a la primera parte de la presentación visual del proyecto desde el siguiente enlace: https://drive.google.com/file/d/1D5rkPbWvOwHo7AcqMf6N6j4Bvj_WiqEi/view?usp=sharing
