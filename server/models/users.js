@@ -12,7 +12,8 @@ const createUser = async (newUser) => {
     } catch (err) {
         console.log(err);
         throw err;
-    } finally {
+    } 
+    finally {
         client.release();
     }
     return result
