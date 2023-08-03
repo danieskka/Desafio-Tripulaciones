@@ -37,7 +37,7 @@ const Profile = () => {
     <article className="logoAdeminContainer">
     <Link to="/User"> <img src={Tools} className="tools-img"></img> </Link>
     </article>
-    <h1>Hola, Jugador</h1>
+    <h1>Hola, Gozer</h1>
     <h2 className="profile-titles">Estadísticas:</h2>
     <div style={{ width: '100%', height: 300 }}>
       <ResponsiveContainer>
