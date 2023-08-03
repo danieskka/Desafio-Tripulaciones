@@ -5,6 +5,7 @@
 const Info = () => {
   return (
     <>
+    {/* <div className="test4menu"><Navegation /></div> */}
     <section className="info_general_container">
         <article className="game_title_quiz">
               <h1>Formación</h1>
