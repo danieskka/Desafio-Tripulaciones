@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <>
       <section className="homeWrapper">
-          <h1>Hola ( NOMBRE DE USUARIO )</h1>
+          <h1>Hola, Gozer</h1>
         <article className="progressHomeContainer">
           <h2>Mira tu progreso</h2>
           <img className="progressMapGame" src="assets/Acceso Directo a juego.svg" alt="Progreso" />
